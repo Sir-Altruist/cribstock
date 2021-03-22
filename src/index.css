@@ -2,12 +2,10 @@
 
 * {
   font-family: "Poppins", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-body {
-  background-color: #e5e5e5;
-}
-
 header {
   background-color: #ffffff;
   position: fixed !important;
@@ -15,31 +13,151 @@ header {
   left: 0px;
   right: 0px;
 }
-
 #header {
   height: 98px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.brand {
+  cursor: pointer;
+}
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+  list-style-type: none;
+  text-align: center;
+  justify-content: end;
+}
+.nav-item {
+  display: flex;
+  align-items: center;
+  height: 100px;
+}
+.nav-link {
+  color: #0b1332;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.nav-link:hover {
+  color: #0b1332;
+}
+
+.menu-icon {
+  visibility: hidden;
+}
 
 main {
   padding-top: 98px;
   min-height: 100vh;
 }
-
 .btn {
   font-size: 16px !important;
   font-weight: 400 !important;
   border: none !important;
   box-shadow: none !important;
 }
-
 .primary-btn {
   font-weight: 500 !important;
+  background-color: #3861fb !important;
+  color: #ffffff !important;
+}
+#section-1 {
+  padding: 150px 0;
+  min-height: calc(100vh - 85.38px);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+}
+#section-2 {
+  padding: 50px 0;
+  background-color: #f9fbfd;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: calc(100vh - 85.38px);
+}
+#section-3 {
+  padding: 100px 0;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: calc(100vh - 85.38px);
+}
+#section-4 {
+  margin: 50px 0;
+  background-color: #faf5f1;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  min-height: calc(100vh - 85.38px);
+}
+.realtor {
+  margin-top: -7rem;
+  margin-left: 7rem;
+}
+.bedroom {
+  width: 118px;
+  height: 61px;
+}
+hr {
+  background-color: "#cccccc";
+}
+.property_card {
+  width: 100%;
+  min-height: 30rem;
   background-color: #3861fb;
+  display: flex;
+  margin-top: 150px;
 }
 
-/* #header .buttons {
-  
-} */
+@media screen and (max-width: 768px) {
+  #header {
+    position: relative;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80vh;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+  .nav-menu.active {
+    background: #ffffff;
+    left: 0;
+    width: 100vw;
+    opacity: 1;
+    transition: all 1s ease;
+    z-index: 1;
+  }
+  .nav-link {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: table;
+  }
+  .menu-icon {
+    visibility: visible;
+    padding-right: 3rem;
+    cursor: pointer;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  .realtor {
+    margin-left: -0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .property_card div {
+    width: 100%;
+  }
+}

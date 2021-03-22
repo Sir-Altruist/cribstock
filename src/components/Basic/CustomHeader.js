@@ -1,34 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Container, Menu, Button } from "semantic-ui-react";
+import { Container, Button, Image, Icon } from "semantic-ui-react";
 import Logo from "../../assets/icons/logo.svg";
 
 function CustomHeader() {
+  const [open, setOpen] = useState(false);
+  const handleClick = () => setOpen(!open);
+  const closeMobile = () => setOpen(false);
   return (
     <header>
       <Container id="header">
         <Link to="/">
-          <img alt="Logo" src={Logo} />
+          <Image alt="Logo" src={Logo} className="brand" />
         </Link>
-
-        <Menu as="nav" text size="huge">
-          <Menu.Menu>
-            <Menu.Item name="about">
-              <Link to="/about">About</Link>
-            </Menu.Item>
-            <Menu.Item name="blog">
-              <Link to="/blog">Blog</Link>
-            </Menu.Item>
-            <Menu.Item name="partners">
-              <Link to="/partners">Partners</Link>
-            </Menu.Item>
-          </Menu.Menu>
-        </Menu>
+        <Icon
+          name={open ? "times" : "bars"}
+          size="large"
+          onClick={handleClick}
+          className="menu-icon"
+        />
+        <ul className={open ? "nav-menu active" : "nav-menu"}>
+          <li name="properties" className="nav-item">
+            <Link to="/properties" onClick={closeMobile} className="nav-link">
+              Properties
+            </Link>
+          </li>
+          <li name="about" className="nav-item">
+            <Link to="/about" onClick={closeMobile} className="nav-link">
+              About
+            </Link>
+          </li>
+          <li name="blog" className="nav-item">
+            <Link to="/blog" onClick={closeMobile} className="nav-link">
+              Blog
+            </Link>
+          </li>
+          <li name="help" className="nav-item">
+            <Link to="/help" onClick={closeMobile} className="nav-link">
+              Help
+            </Link>
+          </li>
+        </ul>
         <div className="buttons">
-          <Button basic className="btn">
-            Login
+          <Button basic className="btn nav-link" onClick={closeMobile}>
+            Sign In
           </Button>
-          <Button className="btn primary-btn">Register</Button>
+          <Button className="btn primary-btn nav-link" onClick={closeMobile}>
+            Register
+          </Button>
         </div>
       </Container>
     </header>
