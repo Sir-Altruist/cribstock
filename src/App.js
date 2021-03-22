@@ -10,6 +10,7 @@ function App({ loggedIn, logout }) {
       <Router>
         <CustomHeader />
         {renderRoutes(routes)}
+        {/* <CustomFooter /> */}
       </Router>
     </div>
   );

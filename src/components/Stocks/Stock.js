@@ -1,0 +1,164 @@
+import React from "react";
+// import PropTypes from 'prop-types';
+import { Image } from "semantic-ui-react";
+import Bedroom from "../../assets/images/bedroom.jpg";
+import { Table } from "semantic-ui-react";
+
+function Stock() {
+  return (
+    <>
+      {/* <section style={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'space-around'
+        }}>
+            <div style={{paddingTop: '1rem'}}>
+                <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'auto 1fr',
+                    gridColumnGap: '1rem',
+                    marginTop: '2rem'
+                }}>
+                <Image src={Bedroom} alt='bedroom' className='bedroom' />
+                <div>
+                <p style={{ fontWeight: '500', fontSize: '18px', color: '#484848'}}>Three Bedroom Flat</p>
+                <small style={{color: '#888888'}}>Lekki Phase 1</small>
+                </div>
+                </div>
+            </div>
+            <div>
+                <p style={{ paddingTop: '2rem', fontWeight: '500', fontSize: '18px'}}>N3,000</p>
+            </div>
+            <div>
+                <p style={{ paddingTop: '2rem', fontWeight: '500', fontSize: '18px'}}>N7,000,000</p>
+            </div>
+            <div>
+                <p style={{ paddingTop: '2rem', fontWeight: '500', fontSize: '18px', color: '#E41111'}}>-9.0%</p>
+            </div>
+            <div>
+                <p style={{ paddingTop: '2rem', fontWeight: '500', fontSize: '18px', color: '#12A672'}}>+9.0%</p>
+            </div>
+            <div style={{paddingTop: '1.5rem'}}>
+                <p style={{ paddingTop: '1rem', fontWeight: '500', fontSize: '18px'}}>N3.8M</p>
+                <small style={{color: '#888888'}}>N8.8M</small>
+            </div>
+            <div>
+                <p style={{ paddingTop: '2rem', fontWeight: '500', fontSize: '18px'}}>1000</p>
+            </div> 
+        </section>
+        <hr /> */}
+      <Table.Row>
+        <Table.Cell>
+          <div style={{ paddingTop: "1rem" }}>
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "auto 1fr",
+                gridColumnGap: "1rem",
+                marginTop: "2rem",
+              }}
+            >
+              <Image src={Bedroom} alt="bedroom" className="bedroom" />
+              <div>
+                <p
+                  style={{
+                    fontWeight: "500",
+                    fontSize: "18px",
+                    color: "#484848",
+                  }}
+                >
+                  Three Bedroom Flat
+                </p>
+                <small style={{ color: "#888888" }}>Lekki Phase 1</small>
+              </div>
+            </div>
+          </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div>
+            <p
+              style={{
+                paddingTop: "2rem",
+                fontWeight: "500",
+                fontSize: "18px",
+              }}
+            >
+              N3,000
+            </p>
+          </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div>
+            <p
+              style={{
+                paddingTop: "2rem",
+                fontWeight: "500",
+                fontSize: "18px",
+              }}
+            >
+              N7,000,000
+            </p>
+          </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div>
+            <p
+              style={{
+                paddingTop: "2rem",
+                fontWeight: "500",
+                fontSize: "18px",
+                color: "#E41111",
+              }}
+            >
+              -9.0%
+            </p>
+          </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div>
+            <p
+              style={{
+                paddingTop: "2rem",
+                fontWeight: "500",
+                fontSize: "18px",
+                color: "#12A672",
+              }}
+            >
+              +9.0%
+            </p>
+          </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div style={{ paddingTop: "1.5rem" }}>
+            <p
+              style={{
+                paddingTop: "1rem",
+                fontWeight: "500",
+                fontSize: "18px",
+              }}
+            >
+              N3.8M
+            </p>
+            <small style={{ color: "#888888" }}>N8.8M</small>
+          </div>
+        </Table.Cell>
+        <Table.Cell>
+          <div>
+            <p
+              style={{
+                paddingTop: "2rem",
+                fontWeight: "500",
+                fontSize: "18px",
+              }}
+            >
+              1000
+            </p>
+          </div>
+        </Table.Cell>
+      </Table.Row>
+    </>
+  );
+}
+
+export default Stock;
