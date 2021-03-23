@@ -78,7 +78,7 @@ function Welcome() {
                     backgroundColor: "#3861FB",
                   }}
                 >
-                  <Link to="/dashboard2" style={{ color: "#ffffff" }}>
+                  <Link to="/details" style={{ color: "#ffffff" }}>
                     Continue
                   </Link>
                 </Button>

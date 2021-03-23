@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Menu, Button, Form, Input } from "semantic-ui-react";
+import { Grid, Menu, Button, Form } from "semantic-ui-react";
 import { RenderField } from "../../components/Basic";
 import { Field, reduxForm } from "redux-form";
 
