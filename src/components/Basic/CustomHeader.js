@@ -43,10 +43,20 @@ function CustomHeader() {
         </ul>
         <div className="buttons">
           <Button basic className="btn nav-link" onClick={closeMobile}>
-            Sign In
+            <Link
+              to="/login"
+              style={{ color: "#2F2F2F", textDecoration: "none" }}
+            >
+              Sign In
+            </Link>
           </Button>
           <Button className="btn primary-btn nav-link" onClick={closeMobile}>
-            Register
+            <Link
+              to="/register"
+              style={{ color: "#ffffff", textDecoration: "none" }}
+            >
+              Register
+            </Link>
           </Button>
         </div>
       </Container>

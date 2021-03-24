@@ -112,6 +112,28 @@ hr {
   display: flex;
   margin-top: 150px;
 }
+.register {
+  background-color: #e5e5e5;
+}
+.reg_form {
+  background-color: #ffffff;
+  width: 50%;
+  min-height: 32rem;
+  margin: 50px auto;
+}
+.register_form {
+  background-color: #e5e5e5 !important;
+}
+.field {
+  width: 60%;
+  margin: 20px auto !important;
+}
+.details {
+  background-color: #ffffff !important;
+}
+.details-form {
+  margin: 5px 0;
+}
 
 @media screen and (max-width: 768px) {
   #header {
