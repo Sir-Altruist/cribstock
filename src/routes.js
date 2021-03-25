@@ -1,4 +1,14 @@
-import { Home, Login, Register, Welcome, Details, NotFound } from "./pages";
+import {
+  Home,
+  Login,
+  Register,
+  Welcome,
+  Details,
+  StockDashboard,
+  NotFound,
+  StockSearch,
+  StockHistory,
+} from "./pages";
 
 const routes = [
   {
@@ -15,12 +25,24 @@ const routes = [
     component: Register,
   },
   {
-    path: "/welcome",
+    path: "/dashboard/welcome",
     component: Welcome,
   },
   {
-    path: "/details",
+    path: "/dashboard/details",
     component: Details,
+  },
+  {
+    path: "/dashboard/stock",
+    component: StockDashboard,
+  },
+  {
+    path: "/dashboard/search",
+    component: StockSearch,
+  },
+  {
+    path: "/dashboard/history",
+    component: StockHistory,
   },
   {
     path: "*",

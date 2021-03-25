@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Grid, Menu, Button, Form } from "semantic-ui-react";
+import { Grid, Button, Form } from "semantic-ui-react";
 import { RenderField } from "../../components/Basic";
 import { Field, reduxForm } from "redux-form";
+import Sidebar from "../../components/Sidebar";
 
 function Details() {
   const [activeItem, setActiveItem] = useState("dashboard");
@@ -20,32 +21,7 @@ function Details() {
             textAlign: "center",
           }}
         >
-          <Menu fluid vertical tabular>
-            <Menu.Item
-              name="dashboard"
-              active={activeItem === "dashboard"}
-              onClick={handleClick}
-              style={{
-                lineHeight: "50px",
-              }}
-            />
-            <Menu.Item
-              name="portfolio"
-              active={activeItem === "portfolio"}
-              onClick={handleClick}
-              style={{
-                lineHeight: "50px",
-              }}
-            />
-            <Menu.Item
-              name="stock"
-              active={activeItem === "stock"}
-              onClick={handleClick}
-              style={{
-                lineHeight: "50px",
-              }}
-            />
-          </Menu>
+          <Sidebar activeItem={activeItem} handleClick={handleClick} />
         </Grid.Column>
         <Grid.Column width={12}>
           <section

@@ -21,7 +21,6 @@ function Head() {
         <Stock />
         <Stock />
         <Stock />
-        <hr />
       </Table.Body>
     </Table>
   );

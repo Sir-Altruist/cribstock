@@ -134,6 +134,23 @@ hr {
 .details-form {
   margin: 5px 0;
 }
+.history_card {
+  width: 100%;
+  min-height: 25rem;
+  background-color: #f8fafd;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+.history_circle {
+  width: 35%;
+  height: 7rem;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+  position: absolute;
+  top: 8%;
+  left: 33%;
+  right: 32%;
+}
 
 @media screen and (max-width: 768px) {
   #header {
