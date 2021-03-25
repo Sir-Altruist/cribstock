@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Grid, Menu, Segment, Button } from "semantic-ui-react";
+import { Grid, Segment, Button, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import Sidebar from "../../components/Sidebar";
 
 function Welcome() {
   const [activeItem, setActiveItem] = useState("dashboard");
@@ -19,32 +20,7 @@ function Welcome() {
             textAlign: "center",
           }}
         >
-          <Menu fluid vertical tabular>
-            <Menu.Item
-              name="dashboard"
-              active={activeItem === "dashboard"}
-              onClick={handleClick}
-              style={{
-                lineHeight: "50px",
-              }}
-            />
-            <Menu.Item
-              name="portfolio"
-              active={activeItem === "portfolio"}
-              onClick={handleClick}
-              style={{
-                lineHeight: "50px",
-              }}
-            />
-            <Menu.Item
-              name="stock"
-              active={activeItem === "stock"}
-              onClick={handleClick}
-              style={{
-                lineHeight: "50px",
-              }}
-            />
-          </Menu>
+          <Sidebar activeItem={activeItem} handleClick={handleClick} />
         </Grid.Column>
         <Grid.Column width={12}>
           <Segment
@@ -58,32 +34,34 @@ function Welcome() {
               margin: "120px auto 50px 35px",
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                flexFlow: "wrap",
-              }}
-            >
-              <div style={{ paddingLeft: "2rem", paddingTop: "2rem" }}>
-                <h2 style={{ color: "#132054" }}>Welcome to cribstock</h2>
-                <p>
-                  Complete account setup by registering your KYC and bank
-                  details.
-                </p>
+            <Container>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  flexWrap: "wrap",
+                }}
+              >
+                <div style={{ paddingLeft: "2rem", paddingTop: "2rem" }}>
+                  <h2 style={{ color: "#132054" }}>Welcome to cribstock</h2>
+                  <p>
+                    Complete account setup by registering your KYC and bank
+                    details.
+                  </p>
+                </div>
+                <div style={{ paddingRight: "2rem", paddingTop: "2rem" }}>
+                  <Button
+                    style={{
+                      backgroundColor: "#3861FB",
+                    }}
+                  >
+                    <Link to="/dashboard/details" style={{ color: "#ffffff" }}>
+                      Continue
+                    </Link>
+                  </Button>
+                </div>
               </div>
-              <div style={{ paddingRight: "2rem", paddingTop: "2rem" }}>
-                <Button
-                  style={{
-                    backgroundColor: "#3861FB",
-                  }}
-                >
-                  <Link to="/details" style={{ color: "#ffffff" }}>
-                    Continue
-                  </Link>
-                </Button>
-              </div>
-            </div>
+            </Container>
           </Segment>
           <Segment
             as="section"
