@@ -4,7 +4,7 @@ import { Head } from "../../components/Stocks";
 import Sidebar from "../../components/Sidebar";
 
 function StockSearch() {
-  const [activeItem, setActiveItem] = useState("dashboard");
+  const [activeItem, setActiveItem] = useState("stock");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };

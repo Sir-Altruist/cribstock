@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Container, Grid, Segment, Image, Button } from "semantic-ui-react";
 import Chart from "../../assets/icons/chart.svg";
 import Sidebar from "../../components/Sidebar";
 
-function StockHistory() {
+function StockHistory2() {
   const [activeItem, setActiveItem] = useState("stock");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
@@ -136,7 +135,7 @@ function StockHistory() {
                           top: "11rem",
                         }}
                       >
-                        <h3>Buy Stocks</h3>
+                        <h3>Sell Stocks</h3>
                         <span>
                           Invest and track all your stocks in one place.
                         </span>
@@ -149,9 +148,7 @@ function StockHistory() {
                           top: "21rem",
                         }}
                       >
-                        <Button color="blue" as={Link} to="/stock/history2">
-                          Buy Stock
-                        </Button>
+                        <Button color="blue">Sell Stock</Button>
                       </div>
                     </div>
                   </Grid.Column>
@@ -166,4 +163,4 @@ function StockHistory() {
   );
 }
 
-export default StockHistory;
+export default StockHistory2;

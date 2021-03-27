@@ -13,7 +13,7 @@ function Sidebar({ activeItem, handleClick }) {
           lineHeight: "50px",
         }}
         as={Link}
-        to="/dashboard/welcome"
+        to="/dashboard/index"
       />
       <Menu.Item
         name="portfolio"
@@ -23,7 +23,7 @@ function Sidebar({ activeItem, handleClick }) {
           lineHeight: "50px",
         }}
         as={Link}
-        to="/dashboard/portfolio"
+        to="/portfolio/index"
       />
       <Menu.Item
         name="stock"
@@ -33,7 +33,7 @@ function Sidebar({ activeItem, handleClick }) {
           lineHeight: "50px",
         }}
         as={Link}
-        to="/dashboard/stock"
+        to="/stock/index"
       />
     </Menu>
   );

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Container, Grid, Header, Segment } from "semantic-ui-react";
 import Sidebar from "../../components/Sidebar";
+import { Link } from "react-router-dom";
 
 function StockDashboard() {
-  const [activeItem, setActiveItem] = useState("dashboard");
+  const [activeItem, setActiveItem] = useState("stock");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
@@ -55,7 +56,9 @@ function StockDashboard() {
                   }}
                 ></div>
                 <div style={{ marginTop: "3rem", marginLeft: "2rem" }}>
-                  <h3 style={{ color: "#132054" }}>Explore Stocks</h3>
+                  <Link to="/stock/search">
+                    <h3 style={{ color: "#132054" }}>Explore Stocks</h3>
+                  </Link>
                   <p>Browse and invest in your various properties</p>
                 </div>
               </div>
@@ -89,7 +92,9 @@ function StockDashboard() {
                   }}
                 ></div>
                 <div style={{ marginTop: "3rem", marginLeft: "2rem" }}>
-                  <h3 style={{ color: "#132054" }}>Sell Stocks</h3>
+                  <Link to="/stock/history">
+                    <h3 style={{ color: "#132054" }}>Sell Stocks</h3>
+                  </Link>
                   <p>Sell your already owned stocks </p>
                 </div>
               </div>
