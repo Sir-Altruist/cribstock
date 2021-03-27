@@ -4,8 +4,8 @@ import { RenderField } from "../../components/Basic";
 import { Field, reduxForm } from "redux-form";
 import Sidebar from "../../components/Sidebar";
 
-function Details() {
-  const [activeItem, setActiveItem] = useState("dashboard");
+function BuyStock() {
+  const [activeItem, setActiveItem] = useState("portfolio");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
@@ -29,80 +29,64 @@ function Details() {
               margin: "120px auto 50px 0px",
             }}
           >
-            <div style={{ padding: "20px 0 10px 3rem" }}>
-              <h2>Tell us about yourself</h2>
-              <p>
-                So we can setup your account right. This will only take a few
-                minutes.
-              </p>
-            </div>
-            <Form>
+            <h2 style={{ color: "#132054", padding: "20px 0 10px 3rem" }}>
+              Buy Stock
+            </h2>
+            <Form className="details">
               <Field
                 component={RenderField}
-                id="details-form-first"
+                id="buy-form-range"
                 type="text"
-                placeholder="First Name"
-                name="firstname"
-                label="First Name"
-                required
+                name="range"
+                label="Stock Price Range"
               />
               <Field
                 component={RenderField}
-                id="register-form-last"
+                id="buy-form-quantity"
                 type="text"
-                placeholder="Last Name"
-                name="lastname"
-                label="Last Name"
-                required
+                placeholder="0.00"
+                name="quantity"
+                label="Quantity"
               />
               <Field
                 component={RenderField}
-                id="register-form-mobile"
+                id="buy-form-dividend"
                 type="text"
-                placeholder="Mobile Number (1)"
-                name="text"
-                label="Mobile Number"
-                required
+                placeholder="%"
+                name="dividend"
+                label="Minimum Dividend Yield"
               />
               <Field
                 component={RenderField}
-                id="register-form-birth"
-                type="date"
-                placeholder="Date Of Birth"
-                name="birth"
-                label="Date of Birth"
+                id="buy-form-appreciation"
+                type="text"
+                placeholder="%"
+                name="appreciation"
+                label="Minimum stock appreciation/yr"
               />
               <Field
                 component={RenderField}
-                id="register-form-address"
+                id="buy-form-location"
                 type="text"
-                placeholder="Address"
-                name="address"
-                label="Address"
+                placeholder="e.g lagos"
+                name="location"
+                label="Location"
               />
               <Field
                 component={RenderField}
-                id="register-form-kin"
+                id="buy-form-type"
                 type="text"
-                placeholder="Next Of Kin"
-                name="kin"
-                label="Next Of Kin"
+                placeholder="e.g Office Complex"
+                name="type"
+                label="Stock Type"
               />
               <Field
                 component={RenderField}
-                id="register-form-bvn"
+                id="buy-form-price"
                 type="text"
-                placeholder="BVN"
-                name="bvn"
-                label="Bank Verification Number(BVN)"
-                required
-              />
-              <Field
-                component={RenderField}
-                id="register-form-govt"
-                type="text"
-                name="govt"
-                label="Govt ID"
+                placeholder="0.0000"
+                name="price"
+                label="Stock Price"
               />
               <div style={{ paddingLeft: "3rem", marginTop: "2rem" }}>
                 <Button
@@ -125,4 +109,4 @@ function Details() {
   );
 }
 
-export default reduxForm({ form: "details" })(Details);
+export default reduxForm({ form: "buyStock" })(BuyStock);

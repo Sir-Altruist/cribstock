@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button } from "semantic-ui-react";
 import { Field, reduxForm } from "redux-form";
-import { RenderField } from "../components/Basic";
+import { BasicField } from "../components/Basic";
 import { Link } from "react-router-dom";
 
 function Register() {
@@ -18,38 +18,42 @@ function Register() {
           Register
         </h2>
         <Field
-          component={RenderField}
+          component={BasicField}
           id="register-form-email"
           type="email"
           placeholder="E-mail address"
           name="email"
+          className="basic-form"
           required
         />
         <Field
-          component={RenderField}
+          component={BasicField}
           id="register-form-username"
           type="text"
           placeholder="Username"
           name="username"
+          className="basic-form"
           required
         />
         <Field
-          component={RenderField}
+          component={BasicField}
           id="register-form-password"
           type="password"
           placeholder="Password"
           name="password"
+          className="basic-form"
           required
         />
         <Field
-          component={RenderField}
+          component={BasicField}
           id="register-form-confirm"
           type="password"
           placeholder="Confirm Password"
           name="confirm"
+          className="basic-form"
           required
         />
-        <div style={{ textAlign: "center" }}>
+        <div style={{ textAlign: "center", marginTop: "3rem" }}>
           <Button
             type="submit"
             className="reg-btn"

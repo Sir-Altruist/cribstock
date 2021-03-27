@@ -1,7 +1,7 @@
 import React from "react";
 import { Form, Button, Checkbox, Grid } from "semantic-ui-react";
 import { Field, reduxForm } from "redux-form";
-import { RenderField } from "../components/Basic";
+import { BasicField } from "../components/Basic";
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -18,32 +18,34 @@ function Login() {
           Sign In
         </h2>
         <Field
-          component={RenderField}
+          component={BasicField}
           id="register-form-username"
           type="text"
           placeholder="Username"
           name="username"
           required
-          className="field"
+          className="basic-form"
         />
         <Field
-          component={RenderField}
+          component={BasicField}
           id="register-form-password"
           type="password"
           placeholder="Password"
           name="password"
           required
-          className="field"
+          className="basic-form"
         />
         <Grid>
           <Grid.Row>
             <Grid.Column computer={3}></Grid.Column>
-            <Grid.Column computer={4}>
+            <Grid.Column computer={5}>
               <Checkbox label="keep me signed in" />
             </Grid.Column>
-            <Grid.Column computer={2}></Grid.Column>
+            <Grid.Column computer={1}></Grid.Column>
             <Grid.Column computer={5}>
-              <p style={{ paddingLeft: "2.5rem" }}>Forgot Password?</p>
+              <Link to="/" style={{ paddingLeft: "2.5rem", color: "#2F2F2F" }}>
+                Forgot Password?
+              </Link>
             </Grid.Column>
             <Grid.Column computer={2}></Grid.Column>
           </Grid.Row>
@@ -57,6 +59,8 @@ function Login() {
               backgroundColor: "#3861FB",
               color: "#ffffff",
             }}
+            as={Link}
+            to="/dashboard/index"
           >
             Login
           </Button>

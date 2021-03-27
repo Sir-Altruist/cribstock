@@ -8,6 +8,10 @@ import {
   NotFound,
   StockSearch,
   StockHistory,
+  StockHistory2,
+  Portfolio,
+  BuyStock,
+  SellStock,
 } from "./pages";
 
 const routes = [
@@ -25,7 +29,7 @@ const routes = [
     component: Register,
   },
   {
-    path: "/dashboard/welcome",
+    path: "/dashboard/index",
     component: Welcome,
   },
   {
@@ -33,16 +37,32 @@ const routes = [
     component: Details,
   },
   {
-    path: "/dashboard/stock",
+    path: "/stock/index",
     component: StockDashboard,
   },
   {
-    path: "/dashboard/search",
+    path: "/stock/search",
     component: StockSearch,
   },
   {
-    path: "/dashboard/history",
+    path: "/stock/history",
     component: StockHistory,
+  },
+  {
+    path: "/stock/history2",
+    component: StockHistory2,
+  },
+  {
+    path: "/portfolio/index",
+    component: Portfolio,
+  },
+  {
+    path: "/portfolio/buystock",
+    component: BuyStock,
+  },
+  {
+    path: "/portfolio/sellstock",
+    component: SellStock,
   },
   {
     path: "*",

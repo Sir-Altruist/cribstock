@@ -126,7 +126,7 @@ hr {
 }
 .field {
   width: 60%;
-  margin: 20px auto !important;
+  margin: 20px 0 10px 3rem !important;
 }
 .details {
   background-color: #ffffff !important;
@@ -150,6 +150,10 @@ hr {
   top: 8%;
   left: 33%;
   right: 32%;
+}
+.basic-form {
+  width: 60% !important;
+  margin: 20px auto !important;
 }
 
 @media screen and (max-width: 768px) {

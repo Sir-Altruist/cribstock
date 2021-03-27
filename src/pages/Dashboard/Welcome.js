@@ -53,11 +53,12 @@ function Welcome() {
                   <Button
                     style={{
                       backgroundColor: "#3861FB",
+                      color: "#ffffff",
                     }}
+                    as={Link}
+                    to="/dashboard/details"
                   >
-                    <Link to="/dashboard/details" style={{ color: "#ffffff" }}>
-                      Continue
-                    </Link>
+                    Continue
                   </Button>
                 </div>
               </div>
