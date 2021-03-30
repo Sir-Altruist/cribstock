@@ -12,7 +12,7 @@ services:
   - docker:19.03.12-dind
 
 before_script:
-  - apk add --update curl bash nodejs npm
+  - apk add --update curl bash nodejs
   - curl https://cli-assets.heroku.com/install.sh | sh
   - heroku login -i
   - heroku container:login
