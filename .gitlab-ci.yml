@@ -12,14 +12,15 @@ services:
   - docker:19.03.12-dind
 
 before_script:
-  - apk add --update curl bash nodejs npm
+  - apk add --update curl bash
   - curl https://cli-assets.heroku.com/install.sh | sh
+  - heroku login -i
+  - heroku container:login
 
 build:
   stage: build
   script:
-    - npm ci
-    - heroku login -i
+    - heroku container:push web
   except:
     refs:
       - master
@@ -28,8 +29,7 @@ build:
 deploy:
   stage: deploy
   script:
-    - npm ci
-    - heroku login
+    - heroku container:release web
   environment:
     name: staging
   only:
