@@ -10,3 +10,12 @@ stages:
 
 services:
   - docker:19.03.12-dind
+
+before_script:
+  - apk install node
+  - curl https://cli-assets.heroku.com/install.sh | sh
+
+build:
+  script:
+    - npm ci
+    - heroku login
