@@ -87,16 +87,16 @@ main {
   min-height: calc(100vh - 85.38px);
 }
 #section-4 {
-  margin: 50px 0;
+  padding: 0 !important;
   background-color: #faf5f1;
   display: flex;
   flex-flow: column wrap;
   justify-content: center;
   min-height: calc(100vh - 85.38px);
+  flex-wrap: wrap;
 }
 .realtor {
   margin-top: -7rem;
-  margin-left: 7rem;
 }
 .bedroom {
   width: 118px;
@@ -112,8 +112,16 @@ hr {
   display: flex;
   margin-top: 150px;
 }
+.property_card_2 {
+  width: 100%;
+  min-height: 30rem;
+  background-color: #3861fb;
+  margin-top: 150px;
+}
 .register {
   background-color: #e5e5e5;
+  width: 100%;
+  min-height: 100vh;
 }
 .reg_form {
   background-color: #ffffff;
@@ -123,10 +131,23 @@ hr {
 }
 .register_form {
   background-color: #e5e5e5 !important;
+  min-height: 30rem;
 }
 .field {
   width: 60%;
-  margin: 20px 0 10px 3rem !important;
+  margin: 10px 0 5px 3rem !important;
+}
+.ui.form input::placeholder {
+  color: #2f2f2f;
+}
+.ui.form input {
+  background-color: #f0f2f5 !important;
+}
+.form-btn {
+  width: 58%;
+  background-color: #3861fb !important;
+  color: #ffffff !important;
+  margin: 5px 0 10px 3rem !important;
 }
 .details {
   background-color: #ffffff !important;
@@ -151,9 +172,28 @@ hr {
   left: 33%;
   right: 32%;
 }
-.basic-form {
-  width: 60% !important;
-  margin: 20px auto !important;
+.login-texts {
+  width: 65%;
+  margin: 2rem auto;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.checkbox {
+  margin-left: 3rem;
+}
+.pass {
+  text-decoration: none;
+  color: #2f2f2f;
+}
+.dash-btn {
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+.details-btn {
+  width: 63%;
+  background-color: #3861fb !important;
+  color: #ffffff !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -196,11 +236,49 @@ hr {
   }
   .realtor {
     margin-left: -0.5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .property_card div {
     width: 100%;
+  }
+  .reg_form {
+    background-color: #ffffff;
+    width: 90%;
+    min-height: 32rem;
+    margin: 50px auto;
+  }
+  .field {
+    width: 90%;
+    margin: 10px 1rem 5px 1rem !important;
+  }
+  .form-btn {
+    width: 90%;
+    margin: 10px 1rem 5px 1rem !important;
+  }
+  .login-texts {
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+  }
+  .checkbox {
+    margin-left: -0.1rem;
+  }
+  .dash-btn {
+    padding-left: 2rem;
+    padding-top: 2rem;
+  }
+  .sell-buy {
+    margin-left: -2rem;
+  }
+  .details-btn {
+    width: 100%;
+    background-color: #3861fb !important;
+    color: #ffffff !important;
+    margin-left: -2rem !important;
   }
 }

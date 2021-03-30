@@ -12,9 +12,10 @@ function Property({ property }) {
     >
       <div
         style={{
-          width: "6rem",
-          height: "50px",
-          backgroundColor: "#C4C4C4",
+          width: "8rem",
+          height: "4rem",
+          backgroundColor: "#3861FB",
+          color: "#ffffff",
           borderRadius: "50%",
           textAlign: "center",
           paddingTop: "1rem",

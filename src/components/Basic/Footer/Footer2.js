@@ -3,7 +3,7 @@ import React from "react";
 function Footer2() {
   return (
     <div>
-      <p>Properties</p>
+      <h4 style={{ color: "#132054" }}>Properties</h4>
       <p>About</p>
       <p>Blog</p>
       <p>Help</p>

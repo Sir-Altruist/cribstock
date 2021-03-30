@@ -33,31 +33,27 @@ function SellStock() {
               Sell Stock
             </h2>
             <Form className="details">
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="sell-form-stock"
                 type="text"
                 name="stock"
                 label="Stock"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="sell-form-quantity"
                 type="text"
                 placeholder="0.00"
                 name="quantity"
                 label="Quantity"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="sell-form-price"
                 type="text"
                 placeholder="$0.0000"
                 name="price"
                 label="Price Per Stock"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="sell-form-total"
                 type="text"
                 placeholder="$0.0000"
@@ -65,15 +61,7 @@ function SellStock() {
                 label="Total Price"
               />
               <div style={{ paddingLeft: "3rem", marginTop: "2rem" }}>
-                <Button
-                  type="submit"
-                  className="reg-btn"
-                  style={{
-                    width: "63%",
-                    backgroundColor: "#3861FB",
-                    color: "#ffffff",
-                  }}
-                >
+                <Button type="submit" className="details-btn">
                   Sell Stock
                 </Button>
               </div>
