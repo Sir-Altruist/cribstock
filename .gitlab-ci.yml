@@ -14,7 +14,6 @@ services:
 before_script:
   - apk add --update curl bash nodejs
   - curl https://cli-assets.heroku.com/install.sh | sh
-  - heroku login -i
   - heroku container:login
 
 build:
