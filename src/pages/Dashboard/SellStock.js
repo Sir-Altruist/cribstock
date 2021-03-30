@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Grid, Button, Form } from "semantic-ui-react";
-import { RenderField } from "../../components/Basic";
-import { Field, reduxForm } from "redux-form";
 import Sidebar from "../../components/Sidebar";
 
 function SellStock() {
@@ -73,4 +71,4 @@ function SellStock() {
   );
 }
 
-export default reduxForm({ form: "sellStock" })(SellStock);
+export default SellStock;
