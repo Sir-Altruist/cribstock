@@ -1,4 +1,4 @@
-image: docker:19.03.12
+image: $CI_CD_REGISTRY_IMAGE:latest
 
 variables:
   DOCKER_HOST: tcp://docker:2375
@@ -12,15 +12,9 @@ stages:
 services:
   - docker:19.03.12-dind
 
-before_script:
-  - apk add --update curl bash nodejs
-  - curl https://cli-assets.heroku.com/install.sh | sh
-  - heroku container:login
-
 build:
   stage: build
-  script:
-    - heroku container:push web -a $APP_NAME
+  script: cribstock build
   except:
     refs:
       - master
@@ -28,8 +22,7 @@ build:
 
 deploy:
   stage: deploy
-  script:
-    - heroku container:release web -a $APP_NAME
+  script: cribstock deploy
   environment:
     name: staging
   only:
