@@ -1,0 +1,12 @@
+image: docker:19.03.12
+
+variables:
+  DOCKER_HOST: tcp://docker:2375
+  DOCKER_TLS_CERTDIR: ""
+
+stages:
+  - build
+  - deploy
+
+services:
+  - docker:19.03.12-dind
