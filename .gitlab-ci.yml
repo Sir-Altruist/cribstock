@@ -12,14 +12,14 @@ services:
   - docker:19.03.12-dind
 
 before_script:
-  - apk add --update nodejs npm
+  - apk add --update curl nodejs npm
   - curl https://cli-assets.heroku.com/install.sh | sh
 
 build:
   stage: build
   script:
     - npm ci
-    - heroku login
+    - heroku login -i
   except:
     refs:
       - master
