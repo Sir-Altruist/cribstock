@@ -22,7 +22,7 @@ function StockSearch() {
         >
           <Sidebar activeItem={activeItem} handleClick={handleClick} />
         </Grid.Column>
-        <Grid.Column width={12}>
+        <Grid.Column width={12} only="computer">
           <Segment
             as="section"
             vertical
@@ -32,18 +32,49 @@ function StockSearch() {
             <Container>
               <Grid centered>
                 <Grid.Row>
-                  <Grid.Column computer={6}>
+                  <Grid.Column width={6}>
                     <h2 style={{ color: "#132054" }}>Stocks</h2>
                   </Grid.Column>
-                  <Grid.Column computer={4}>
+                  <Grid.Column width={4}>
                     <Search placeholder="Search Stock" />
                   </Grid.Column>
-                  <Grid.Column computer={2}></Grid.Column>
-                  <Grid.Column computer={4}>
+                  <Grid.Column width={2}></Grid.Column>
+                  <Grid.Column width={4}>
                     <p>
-                      Sort by: Default <Icon name="caret down" />
+                      <strong>Sort by: Default</strong>{" "}
+                      <Icon name="caret down" />
                     </p>
                   </Grid.Column>
+                </Grid.Row>
+              </Grid>
+              <Grid style={{ marginTop: "5rem" }}>
+                <Grid.Row columns={1}>
+                  <Head />
+                </Grid.Row>
+              </Grid>
+            </Container>
+          </Segment>
+        </Grid.Column>
+        <Grid.Column width={12} only="mobile">
+          <Segment
+            as="section"
+            vertical
+            basic
+            style={{ margin: "100px auto 10px 0" }}
+          >
+            <Container>
+              <Grid>
+                <Grid.Row>
+                  <Grid.Column width={16}>
+                    <h2 style={{ color: "#132054" }}>Stocks</h2>
+                  </Grid.Column>
+                  <div style={{ display: "flex", marginTop: "2rem" }}>
+                    <Search placeholder="Search Stock" />
+                    <p style={{ paddingLeft: "1rem" }}>
+                      <strong>Sort by: Default</strong>{" "}
+                      <Icon name="caret down" />
+                    </p>
+                  </div>
                 </Grid.Row>
               </Grid>
               <Grid style={{ marginTop: "5rem" }}>

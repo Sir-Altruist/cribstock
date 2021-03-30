@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Grid, Button, Form } from "semantic-ui-react";
-import { RenderField } from "../../components/Basic";
-import { Field, reduxForm } from "redux-form";
 import Sidebar from "../../components/Sidebar";
 
 function BuyStock() {
@@ -33,55 +31,48 @@ function BuyStock() {
               Buy Stock
             </h2>
             <Form className="details">
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-range"
                 type="text"
                 name="range"
                 label="Stock Price Range"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-quantity"
                 type="text"
                 placeholder="0.00"
                 name="quantity"
                 label="Quantity"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-dividend"
                 type="text"
                 placeholder="%"
                 name="dividend"
                 label="Minimum Dividend Yield"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-appreciation"
                 type="text"
                 placeholder="%"
                 name="appreciation"
                 label="Minimum stock appreciation/yr"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-location"
                 type="text"
                 placeholder="e.g lagos"
                 name="location"
                 label="Location"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-type"
                 type="text"
                 placeholder="e.g Office Complex"
                 name="type"
                 label="Stock Type"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="buy-form-price"
                 type="text"
                 placeholder="0.0000"
@@ -89,15 +80,7 @@ function BuyStock() {
                 label="Stock Price"
               />
               <div style={{ paddingLeft: "3rem", marginTop: "2rem" }}>
-                <Button
-                  type="submit"
-                  className="reg-btn"
-                  style={{
-                    width: "63%",
-                    backgroundColor: "#3861FB",
-                    color: "#ffffff",
-                  }}
-                >
+                <Button type="submit" className="details-btn">
                   Buy Stock
                 </Button>
               </div>
@@ -109,4 +92,4 @@ function BuyStock() {
   );
 }
 
-export default reduxForm({ form: "buyStock" })(BuyStock);
+export default BuyStock;

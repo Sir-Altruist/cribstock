@@ -23,12 +23,12 @@ function Home({ properties }) {
       <main>
         <Segment as="section" basic id="section-1" vertical>
           <Container>
-            <Grid columns={2} centered>
+            <Grid columns={2}>
               <Grid.Row>
-                <Grid.Column computer={8} mobile={16}>
+                <Grid.Column width={10} only="computer">
                   <h1
                     style={{
-                      fontWeight: "bold",
+                      fontWeight: "700",
                       fontSize: "50px",
                       lineHeight: "75px",
                       display: "flex",
@@ -36,7 +36,7 @@ function Home({ properties }) {
                       color: "#132054",
                     }}
                   >
-                    Buy Properties in Stocks
+                    Buy Commercial Properties in Stocks
                   </h1>
                   <p
                     style={{
@@ -44,23 +44,56 @@ function Home({ properties }) {
                     }}
                   >
                     Massa tempor nec feugiat nisl pretium. Egestas fringilla
+                    <br />
                     phasellus faucibus scelerisque eleifend donec. Porta nibh
-                    vene natis cras sed felis eget velit aliquet.
+                    vene
+                    <br /> natis cras sed felis eget velit aliquet.
                   </p>
                   <Button
                     style={{
                       backgroundColor: "#3861FB",
+                      color: "#ffffff",
                     }}
+                    as={Link}
+                    to="/"
                   >
-                    <Link
-                      to="/"
-                      style={{ color: "#ffffff", textDecoration: "none" }}
-                    >
-                      Get Started
-                    </Link>
+                    Get Started
                   </Button>
                 </Grid.Column>
-                <Grid.Column computer={8} mobile={16}>
+                <Grid.Column width={16} only="mobile">
+                  <h1
+                    style={{
+                      fontWeight: "700",
+                      fontSize: "30px",
+                      display: "flex",
+                      color: "#132054",
+                    }}
+                  >
+                    Buy Commercial Properties in Stocks
+                  </h1>
+                  <p
+                    style={{
+                      color: "#0B1332",
+                    }}
+                  >
+                    Massa tempor nec feugiat nisl pretium. Egestas fringilla
+                    <br />
+                    phasellus faucibus scelerisque eleifend donec. Porta nibh
+                    vene
+                    <br /> natis cras sed felis eget velit aliquet.
+                  </p>
+                  <Button
+                    style={{
+                      backgroundColor: "#3861FB",
+                      color: "#ffffff",
+                    }}
+                    as={Link}
+                    to="/"
+                  >
+                    Get Started
+                  </Button>
+                </Grid.Column>
+                <Grid.Column computer={6} mobile={16}>
                   <Image src={Realtor} alt="realtor" className="realtor" />
                 </Grid.Column>
               </Grid.Row>
@@ -125,7 +158,7 @@ function Home({ properties }) {
               </Grid.Row>
             </Grid>
             <Grid>
-              <Grid.Row>
+              <Grid.Row columns={2} only="computer">
                 <section className="property_card">
                   <div style={{ paddingTop: "5rem", paddingLeft: "7rem" }}>
                     <h2 style={{ color: "white" }}>
@@ -149,6 +182,33 @@ function Home({ properties }) {
                       marginTop: "15rem",
                       marginBottom: "-.2rem",
                       marginRight: "-.9rem",
+                    }}
+                  />
+                </section>
+              </Grid.Row>
+              <Grid.Row columns={1} only="mobile">
+                <section className="property_card_2">
+                  <div style={{ paddingTop: "5rem", textAlign: "center" }}>
+                    <h2 style={{ color: "white" }}>
+                      Enlist your properties for sale on Cribstock
+                    </h2>
+                    <p style={{ color: "white" }}>
+                      Massa tempor nec feugiat nisl pretium. Egestas fringilla
+                      phasellus faucibus scelerisque eleifend donec. Porta nibh
+                    </p>
+                    <Button color="white">
+                      <Link to="/" style={{ color: "black" }}>
+                        Link your property
+                      </Link>
+                    </Button>
+                  </div>
+                  <Image
+                    src={Houses}
+                    alt="houses"
+                    style={{
+                      width: "40rem",
+                      marginTop: "5rem",
+                      marginBottom: "-.2rem",
                     }}
                   />
                 </section>

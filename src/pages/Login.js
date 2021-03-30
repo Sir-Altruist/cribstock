@@ -1,7 +1,5 @@
 import React from "react";
 import { Form, Button, Checkbox, Grid } from "semantic-ui-react";
-import { Field, reduxForm } from "redux-form";
-import { BasicField } from "../components/Basic";
 import { Link } from "react-router-dom";
 
 function Login() {
@@ -17,60 +15,46 @@ function Login() {
         >
           Sign In
         </h2>
-        <Field
-          component={BasicField}
-          id="register-form-username"
-          type="text"
-          placeholder="Username"
-          name="username"
-          required
-          className="basic-form"
-        />
-        <Field
-          component={BasicField}
-          id="register-form-password"
-          type="password"
-          placeholder="Password"
-          name="password"
-          required
-          className="basic-form"
-        />
-        <Grid>
-          <Grid.Row>
-            <Grid.Column computer={3}></Grid.Column>
-            <Grid.Column computer={5}>
-              <Checkbox label="keep me signed in" />
-            </Grid.Column>
-            <Grid.Column computer={1}></Grid.Column>
-            <Grid.Column computer={5}>
-              <Link to="/" style={{ paddingLeft: "2.5rem", color: "#2F2F2F" }}>
-                Forgot Password?
-              </Link>
-            </Grid.Column>
-            <Grid.Column computer={2}></Grid.Column>
-          </Grid.Row>
+        <Grid centered>
+          <Form.Input
+            id="register-form-username"
+            type="text"
+            placeholder="User Name"
+            name="username"
+            required
+          />
+          <Form.Input
+            id="register-form-password"
+            type="password"
+            placeholder="Password"
+            name="password"
+            required
+          />
         </Grid>
-        <div style={{ textAlign: "center", marginTop: "3rem" }}>
-          <Button
-            type="submit"
-            className="reg-btn"
-            style={{
-              width: "60%",
-              backgroundColor: "#3861FB",
-              color: "#ffffff",
-            }}
-            as={Link}
-            to="/dashboard/index"
-          >
-            Login
-          </Button>
+        <div className="login-texts">
+          <Checkbox label="Keep me signed in" />
+          <Link to="/" className="pass">
+            Forgot Password?
+          </Link>
         </div>
-        <p style={{ textAlign: "center" }}>
-          Do not have an account? <Link to="/register">Register</Link>
-        </p>
+        <Grid>
+          <Grid.Column textAlign="center">
+            <Button
+              type="submit"
+              className="form-btn"
+              as={Link}
+              to="/dashboard/index"
+            >
+              Login
+            </Button>
+            <p style={{ textAlign: "center", padding: "10px 0 10px 3rem" }}>
+              Do not have an account? <Link to="/login">Register</Link>
+            </p>
+          </Grid.Column>
+        </Grid>
       </Form>
     </main>
   );
 }
 
-export default reduxForm({ form: "login" })(Login);
+export default Login;

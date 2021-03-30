@@ -16,7 +16,7 @@ function CustomFooter() {
     >
       <Container>
         <Grid>
-          <Grid.Row>
+          <Grid.Row only="computer">
             <Grid.Column computer={6}>
               <Footer1 />
             </Grid.Column>
@@ -30,6 +30,25 @@ function CustomFooter() {
               <Footer4 />
             </Grid.Column>
             <Grid.Column computer={2}>
+              <Footer5 />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row only="mobile">
+            <Grid.Column>
+              <Footer1 />
+            </Grid.Column>
+          </Grid.Row>
+          <Grid.Row only="mobile">
+            <Grid.Column width={4}>
+              <Footer2 />
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <Footer3 />
+            </Grid.Column>
+            <Grid.Column width={4}>
+              <Footer4 />
+            </Grid.Column>
+            <Grid.Column width={4}>
               <Footer5 />
             </Grid.Column>
           </Grid.Row>

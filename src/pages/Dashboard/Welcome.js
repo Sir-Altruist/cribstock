@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Grid, Segment, Button, Container } from "semantic-ui-react";
+import { Grid, Segment, Button, Container, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
+import Cart from "../../assets/icons/cart.svg";
 
 function Welcome() {
   const [activeItem, setActiveItem] = useState("dashboard");
@@ -29,9 +30,9 @@ function Welcome() {
             basic
             style={{
               width: "85%",
-              height: "15rem",
+              minHeight: "12rem",
               border: "1px solid #E7E7E7",
-              margin: "120px auto 50px 35px",
+              margin: "120px auto 20px 35px",
             }}
           >
             <Container>
@@ -49,7 +50,7 @@ function Welcome() {
                     details.
                   </p>
                 </div>
-                <div style={{ paddingRight: "2rem", paddingTop: "2rem" }}>
+                <div className="dash-btn">
                   <Button
                     style={{
                       backgroundColor: "#3861FB",
@@ -70,12 +71,76 @@ function Welcome() {
             basic
             style={{
               width: "85%",
-              height: "15rem",
-              border: "1px solid #E7E7E7",
+              height: "12rem",
               margin: "0 auto 100px 35px",
             }}
           >
-            <h2 style={{ color: "#2F2F2F", paddingLeft: "2rem" }}>Buy Stock</h2>
+            <Container>
+              <Grid>
+                <Grid.Row>
+                  <Grid.Column computer={8} mobile={16}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "12rem",
+                        backgroundColor: "#FAF5F1",
+                        border: "1px solid #E7E7E7",
+                        display: "flex",
+                        paddingTop: "2rem",
+                        paddingLeft: "2rem",
+                        marginTop: "2rem",
+                      }}
+                    >
+                      <Image
+                        src={Cart}
+                        style={{ marginBottom: "7rem", paddingRight: "1rem" }}
+                      />
+                      <div>
+                        <h2>
+                          <Link
+                            to="/portfolio/buystock"
+                            style={{ color: "#2F2F2F" }}
+                          >
+                            Buy Stock
+                          </Link>
+                        </h2>
+                        <p>Browse and invest in your various properties</p>
+                      </div>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column computer={8} mobile={16}>
+                    <div
+                      style={{
+                        width: "100%",
+                        height: "12rem",
+                        backgroundColor: "#FAF5F1",
+                        border: "1px solid #E7E7E7",
+                        display: "flex",
+                        paddingTop: "2rem",
+                        paddingLeft: "2rem",
+                        marginTop: "2rem",
+                      }}
+                    >
+                      <Image
+                        src={Cart}
+                        style={{ marginBottom: "7rem", paddingRight: "1rem" }}
+                      />
+                      <div>
+                        <h2>
+                          <Link
+                            to="/portfolio/sellstock"
+                            style={{ color: "#2F2F2F" }}
+                          >
+                            Sell Stock
+                          </Link>
+                        </h2>
+                        <p>Browse and invest in your various properties</p>
+                      </div>
+                    </div>
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
+            </Container>
           </Segment>
         </Grid.Column>
       </Grid.Row>

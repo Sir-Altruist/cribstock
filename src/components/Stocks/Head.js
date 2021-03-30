@@ -4,7 +4,7 @@ import Stock from "./Stock";
 
 function Head() {
   return (
-    <Table basic="very">
+    <Table basic="very" unstackable>
       <Table.Header>
         <Table.Row>
           <Table.HeaderCell>stocks</Table.HeaderCell>

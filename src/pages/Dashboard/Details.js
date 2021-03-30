@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Grid, Button, Form } from "semantic-ui-react";
-import { RenderField } from "../../components/Basic";
-import { Field, reduxForm } from "redux-form";
 import Sidebar from "../../components/Sidebar";
 
 function Details() {
@@ -37,8 +35,7 @@ function Details() {
               </p>
             </div>
             <Form>
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="details-form-first"
                 type="text"
                 placeholder="First Name"
@@ -46,8 +43,7 @@ function Details() {
                 label="First Name"
                 required
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-last"
                 type="text"
                 placeholder="Last Name"
@@ -55,8 +51,7 @@ function Details() {
                 label="Last Name"
                 required
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-mobile"
                 type="text"
                 placeholder="Mobile Number (1)"
@@ -64,32 +59,28 @@ function Details() {
                 label="Mobile Number"
                 required
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-birth"
                 type="date"
                 placeholder="Date Of Birth"
                 name="birth"
                 label="Date of Birth"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-address"
                 type="text"
                 placeholder="Address"
                 name="address"
                 label="Address"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-kin"
                 type="text"
                 placeholder="Next Of Kin"
                 name="kin"
                 label="Next Of Kin"
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-bvn"
                 type="text"
                 placeholder="BVN"
@@ -97,23 +88,14 @@ function Details() {
                 label="Bank Verification Number(BVN)"
                 required
               />
-              <Field
-                component={RenderField}
+              <Form.Input
                 id="register-form-govt"
                 type="text"
                 name="govt"
                 label="Govt ID"
               />
               <div style={{ paddingLeft: "3rem", marginTop: "2rem" }}>
-                <Button
-                  type="submit"
-                  className="reg-btn"
-                  style={{
-                    width: "63%",
-                    backgroundColor: "#3861FB",
-                    color: "#ffffff",
-                  }}
-                >
+                <Button type="submit" className="details-btn">
                   Buy Stock
                 </Button>
               </div>
@@ -125,4 +107,4 @@ function Details() {
   );
 }
 
-export default reduxForm({ form: "details" })(Details);
+export default Details;
