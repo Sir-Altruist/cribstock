@@ -3,6 +3,7 @@ image: docker:19.03.12
 variables:
   DOCKER_HOST: tcp://docker:2375
   DOCKER_TLS_CERTDIR: ""
+  APP_NAME: cribstock-web
 
 stages:
   - build
@@ -19,7 +20,7 @@ before_script:
 build:
   stage: build
   script:
-    - heroku container:push web
+    - heroku container:push web -a $APP_NAME
   except:
     refs:
       - master
@@ -28,7 +29,7 @@ build:
 deploy:
   stage: deploy
   script:
-    - heroku container:release web
+    - heroku container:release web -a $APP_NAME
   environment:
     name: staging
   only:
