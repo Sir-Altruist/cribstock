@@ -2,15 +2,19 @@ import React, { useState } from "react";
 import { Grid, Segment, Search, Icon, Container } from "semantic-ui-react";
 import { Head } from "../../components/Stocks";
 import Sidebar from "../../components/Sidebar";
+import { StocksearchMobile } from "../../components/Mobile";
 
 function StockSearch() {
   const [activeItem, setActiveItem] = useState("stock");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
+  const [visible, setVisible] = useState(false);
+  const visibilityToggle = () => setVisible(!visible);
+  const cancelSidebar = () => setVisible(false);
   return (
     <Grid>
-      <Grid.Row>
+      <Grid.Row only="computer">
         <Grid.Column
           width={4}
           style={{
@@ -22,7 +26,7 @@ function StockSearch() {
         >
           <Sidebar activeItem={activeItem} handleClick={handleClick} />
         </Grid.Column>
-        <Grid.Column width={12} only="computer">
+        <Grid.Column width={12}>
           <Segment
             as="section"
             vertical
@@ -55,7 +59,7 @@ function StockSearch() {
             </Container>
           </Segment>
         </Grid.Column>
-        <Grid.Column width={12} only="mobile">
+        <Grid.Column width={12}>
           <Segment
             as="section"
             vertical
@@ -85,6 +89,15 @@ function StockSearch() {
             </Container>
           </Segment>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row only="mobile">
+        <StocksearchMobile
+          activeItem={activeItem}
+          visible={visible}
+          visibilityToggle={visibilityToggle}
+          handleClick={handleClick}
+          cancelSidebar={cancelSidebar}
+        />
       </Grid.Row>
     </Grid>
   );

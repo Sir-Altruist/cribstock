@@ -64,8 +64,7 @@ function Home({ properties }) {
                   <h1
                     style={{
                       fontWeight: "700",
-                      fontSize: "30px",
-                      display: "flex",
+                      fontSize: "28px",
                       color: "#132054",
                     }}
                   >
@@ -130,7 +129,6 @@ function Home({ properties }) {
               as="h1"
               style={{
                 color: "#132054",
-                textAlign: "center",
               }}
             >
               How Cribstock Works
@@ -138,7 +136,7 @@ function Home({ properties }) {
             <Grid centered>
               <Grid.Row>
                 <Grid.Column computer={9} mobile={16}>
-                  <p style={{ textAlign: "center" }}>
+                  <p>
                     Massa tempor nec feugiat nisl pretium. Egestas fringilla
                     phasellus faucibus scelerisque eleifend donec. Porta nibh
                     vene natis cras sed felis eget velit aliquet.

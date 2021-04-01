@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { Grid, Button, Form } from "semantic-ui-react";
 import Sidebar from "../../components/Sidebar";
+import { DetailsMobile } from "../../components/Mobile";
 
 function Details() {
   const [activeItem, setActiveItem] = useState("dashboard");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
+  const [visible, setVisible] = useState(false);
+  const visibilityToggle = () => setVisible(!visible);
+  const cancelSidebar = () => setVisible(false);
   return (
     <Grid>
-      <Grid.Row>
+      <Grid.Row only="computer">
         <Grid.Column
           width={4}
           style={{
@@ -102,6 +106,15 @@ function Details() {
             </Form>
           </section>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row only="mobile">
+        <DetailsMobile
+          activeItem={activeItem}
+          visible={visible}
+          visibilityToggle={visibilityToggle}
+          handleClick={handleClick}
+          cancelSidebar={cancelSidebar}
+        />
       </Grid.Row>
     </Grid>
   );

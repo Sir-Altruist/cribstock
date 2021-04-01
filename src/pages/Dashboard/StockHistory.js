@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Grid, Segment, Image, Button } from "semantic-ui-react";
 import Chart from "../../assets/icons/chart.svg";
+import { StockhistoryMobile } from "../../components/Mobile";
 import Sidebar from "../../components/Sidebar";
 
 function StockHistory() {
@@ -9,9 +10,12 @@ function StockHistory() {
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
+  const [visible, setVisible] = useState(false);
+  const visibilityToggle = () => setVisible(!visible);
+  const cancelSidebar = () => setVisible(false);
   return (
     <Grid>
-      <Grid.Row>
+      <Grid.Row only="computer">
         <Grid.Column
           width={4}
           style={{
@@ -264,41 +268,20 @@ function StockHistory() {
                       </p>
                     </div>
                   </Grid.Column>
-                  {/* <Grid.Column computer={5}>
-                    <div className="history_card">
-                      <div className="history_circle"></div>
-                      <div
-                        style={{
-                          position: "absolute",
-                          textAlign: "center",
-                          top: "11rem",
-                        }}
-                      >
-                        <h3>Buy Stocks</h3>
-                        <span>
-                          Invest and track all your stocks in one place.
-                        </span>
-                      </div>
-                      <div
-                        style={{
-                          position: "absolute",
-                          left: "30%",
-                          right: "20%",
-                          top: "21rem",
-                        }}
-                      >
-                        <Button color="blue" as={Link} to="/stock/history2">
-                          Buy Stock
-                        </Button>
-                      </div>
-                    </div>
-                  </Grid.Column> */}
-                  {/* <Grid.Column computer={2}></Grid.Column> */}
                 </Grid.Row>
               </Grid>
             </Container>
           </Segment>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row only="mobile">
+        <StockhistoryMobile
+          activeItem={activeItem}
+          visible={visible}
+          visibilityToggle={visibilityToggle}
+          handleClick={handleClick}
+          cancelSidebar={cancelSidebar}
+        />
       </Grid.Row>
     </Grid>
   );
