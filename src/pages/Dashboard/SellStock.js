@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Grid, Button, Form } from "semantic-ui-react";
+import { SellstockMobile } from "../../components/Mobile";
 import Sidebar from "../../components/Sidebar";
 
 function SellStock() {
@@ -7,9 +8,12 @@ function SellStock() {
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
+  const [visible, setVisible] = useState(false);
+  const visibilityToggle = () => setVisible(!visible);
+  const cancelSidebar = () => setVisible(false);
   return (
     <Grid>
-      <Grid.Row>
+      <Grid.Row only="computer">
         <Grid.Column
           width={4}
           style={{
@@ -66,6 +70,15 @@ function SellStock() {
             </Form>
           </section>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row only="mobile">
+        <SellstockMobile
+          activeItem={activeItem}
+          visible={visible}
+          visibilityToggle={visibilityToggle}
+          handleClick={handleClick}
+          cancelSidebar={cancelSidebar}
+        />
       </Grid.Row>
     </Grid>
   );

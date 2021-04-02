@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Container, Grid, Segment, Image, Button } from "semantic-ui-react";
 import Chart from "../../assets/icons/chart.svg";
+import { Stockhistory2Mobile } from "../../components/Mobile";
 import Sidebar from "../../components/Sidebar";
 
 function StockHistory2() {
@@ -8,9 +9,12 @@ function StockHistory2() {
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
+  const [visible, setVisible] = useState(false);
+  const visibilityToggle = () => setVisible(!visible);
+  const cancelSidebar = () => setVisible(false);
   return (
     <Grid>
-      <Grid.Row>
+      <Grid.Row only="computer">
         <Grid.Column
           width={4}
           style={{
@@ -261,7 +265,7 @@ function StockHistory2() {
                       </p>
                     </div>
                   </Grid.Column>
-                  {/* <Grid.Column computer={5}>
+                  <Grid.Column computer={5}>
                     <div className="history_card">
                       <div className="history_circle"></div>
                       <div
@@ -287,13 +291,22 @@ function StockHistory2() {
                         <Button color="blue">Sell Stock</Button>
                       </div>
                     </div>
-                  </Grid.Column> */}
-                  {/* <Grid.Column computer={2}></Grid.Column> */}
+                  </Grid.Column>
+                  <Grid.Column computer={2}></Grid.Column>
                 </Grid.Row>
               </Grid>
             </Container>
           </Segment>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row only="mobile">
+        <Stockhistory2Mobile
+          activeItem={activeItem}
+          visible={visible}
+          visibilityToggle={visibilityToggle}
+          handleClick={handleClick}
+          cancelSidebar={cancelSidebar}
+        />
       </Grid.Row>
     </Grid>
   );

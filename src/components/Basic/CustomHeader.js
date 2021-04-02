@@ -44,7 +44,7 @@ function CustomHeader() {
         <div className="buttons">
           <Button
             basic
-            className="btn nav-link"
+            className="btn"
             onClick={closeMobile}
             as={Link}
             to="/login"
@@ -52,7 +52,7 @@ function CustomHeader() {
             Sign In
           </Button>
           <Button
-            className="btn primary-btn nav-link"
+            className="primary-btn"
             onClick={closeMobile}
             as={Link}
             to="/register"

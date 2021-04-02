@@ -3,15 +3,19 @@ import { Grid, Segment, Button, Container, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import Cart from "../../assets/icons/cart.svg";
+import { WelcomeMobile } from "../../components/Mobile";
 
 function Welcome() {
   const [activeItem, setActiveItem] = useState("dashboard");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
+  const [visible, setVisible] = useState(false);
+  const visibilityToggle = () => setVisible(!visible);
+  const cancelSidebar = () => setVisible(false);
   return (
     <Grid>
-      <Grid.Row>
+      <Grid.Row only="computer">
         <Grid.Column
           width={4}
           style={{
@@ -143,6 +147,15 @@ function Welcome() {
             </Container>
           </Segment>
         </Grid.Column>
+      </Grid.Row>
+      <Grid.Row only="mobile">
+        <WelcomeMobile
+          activeItem={activeItem}
+          visible={visible}
+          visibilityToggle={visibilityToggle}
+          handleClick={handleClick}
+          cancelSidebar={cancelSidebar}
+        />
       </Grid.Row>
     </Grid>
   );
