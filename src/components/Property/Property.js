@@ -12,8 +12,9 @@ function Property({ property }) {
     >
       <div
         style={{
-          width: "8rem",
-          height: "4rem",
+          width: "58px",
+          minWidth: "58px",
+          height: "58px",
           backgroundColor: "#3861FB",
           color: "#ffffff",
           borderRadius: "50%",

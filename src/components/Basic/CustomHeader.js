@@ -13,12 +13,6 @@ function CustomHeader() {
         <Link to="/">
           <Image alt="Logo" src={Logo} className="brand" />
         </Link>
-        <Icon
-          name={open ? "times" : "bars"}
-          size="large"
-          onClick={handleClick}
-          className="menu-icon"
-        />
         <ul className={open ? "nav-menu active" : "nav-menu"}>
           <li name="properties" className="nav-item">
             <Link to="/properties" onClick={closeMobile} className="nav-link">
@@ -60,6 +54,12 @@ function CustomHeader() {
             Register
           </Button>
         </div>
+        <Icon
+          name={open ? "times" : "bars"}
+          size="large"
+          onClick={handleClick}
+          className="menu-icon"
+        />
       </Container>
     </header>
   );

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,600&display=swap");
 
-* {
+*:not(i.icon) {
   font-family: "Poppins", sans-serif !important;
   margin: 0;
   padding: 0;
@@ -47,7 +47,7 @@ header {
 }
 
 .menu-icon {
-  visibility: hidden;
+  display: none !important;
 }
 
 main {
@@ -75,10 +75,10 @@ main {
 #section-2 {
   padding: 50px 0;
   background-color: #f9fbfd;
-  display: flex;
+  /* display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  min-height: calc(100vh - 85.38px);
+  min-height: calc(100vh - 85.38px); */
 }
 #section-3 {
   padding: 100px 0;
@@ -247,7 +247,7 @@ hr {
     display: table;
   }
   .menu-icon {
-    visibility: visible;
+    display: inline-block !important;
     cursor: pointer;
   }
   .buttons {
