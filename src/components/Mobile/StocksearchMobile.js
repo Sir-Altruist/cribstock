@@ -70,7 +70,7 @@ function StocksearchMobile({
           <Sidebar.Pusher dimmed={visible} style={{ minHeight: "100vh" }}>
             <Segment basic>
               <h2 style={{ color: "#132054" }}>Stocks</h2>
-              <Search placeholder="Search Stock" />
+              <Search placeholder="Search Stock" size="mini" />
               <p style={{ paddingTop: "1rem" }}>
                 <strong>Sort by: Default</strong> <Icon name="caret down" />
               </p>

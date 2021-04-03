@@ -83,9 +83,9 @@ function PortfolioMobile({
                   >
                     <h2 style={{ color: "#132054" }}>Portfolio</h2>
                     <Button
-                      color="blue"
                       size="tiny"
                       onClick={() => setOpen(true)}
+                      className="history-btn"
                     >
                       Buy/Sell Stock
                     </Button>
@@ -106,31 +106,35 @@ function PortfolioMobile({
                     borderRadius: "8px",
                   }}
                 >
-                  <div>
+                  <div style={{ paddingBottom: "4rem" }}>
                     <span>Total Portfolio Value</span>
-                    <h4>N30,000,000</h4>
+                    <h4>
+                      <span>&#x20A6;30,000,000</span>
+                    </h4>
                   </div>
-                  <div>
+                  <div style={{ paddingBottom: "4rem" }}>
                     <span>24h Change</span>
-                    <h4 style={{ color: "#12A672", textAlign: "right" }}>
+                    <h4 style={{ color: "#12A672", textAlign: "center" }}>
                       +9.0%
                     </h4>
                   </div>
-                  <div>
+                  <div style={{ paddingBottom: "4rem" }}>
                     <span>No of stocks</span>
-                    <h4>3000</h4>
+                    <h4 style={{ textAlign: "right" }}>3000</h4>
                   </div>
-                  <div>
+                  <div style={{ paddingBottom: "1rem" }}>
                     <span>Dividends</span>
-                    <h4 style={{ textAlign: "right" }}>N3000</h4>
+                    <h4>
+                      <span>&#x20A6;3000</span>
+                    </h4>
                   </div>
-                  <div>
+                  <div style={{ paddingBottom: "1rem" }}>
                     <span>Purchased</span>
-                    <h4>1500</h4>
+                    <h4 style={{ textAlign: "center" }}>1500</h4>
                   </div>
-                  <div>
+                  <div style={{ paddingBottom: "1rem" }}>
                     <span>Sold</span>
-                    <h4>1500</h4>
+                    <h4 style={{ textAlign: "right" }}>1500</h4>
                   </div>
                 </section>
                 <section

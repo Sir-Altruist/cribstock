@@ -42,7 +42,7 @@ function Stock() {
                 fontSize: "18px",
               }}
             >
-              N3,000
+              <span>&#8358;</span>3,000
             </p>
           </div>
         </Table.Cell>
@@ -55,7 +55,7 @@ function Stock() {
                 fontSize: "18px",
               }}
             >
-              N7,000,000
+              <span>&#8358;</span>7,000,000
             </p>
           </div>
         </Table.Cell>
@@ -96,9 +96,11 @@ function Stock() {
                 fontSize: "18px",
               }}
             >
-              N3.8M
+              <span>&#8358;</span>3.8M
             </p>
-            <small style={{ color: "#888888" }}>N8.8M</small>
+            <small style={{ color: "#888888" }}>
+              <span>&#8358;</span>8.8M
+            </small>
           </div>
         </Table.Cell>
         <Table.Cell>

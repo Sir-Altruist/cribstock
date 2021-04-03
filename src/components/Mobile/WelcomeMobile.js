@@ -94,12 +94,9 @@ function WelcomeMobile({
                       details.
                     </p>
                   </div>
-                  <div className="dash-btn">
+                  <div style={{ marginLeft: "19rem" }}>
                     <Button
-                      style={{
-                        backgroundColor: "#3861FB",
-                        color: "#ffffff",
-                      }}
+                      className="continue-btn"
                       as={Link}
                       to="/dashboard/details"
                     >
