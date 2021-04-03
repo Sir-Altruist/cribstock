@@ -47,7 +47,11 @@ function Portfolio() {
                     </Grid.Column>
                     <Grid.Column width={5}></Grid.Column>
                     <Grid.Column width={5} className="sell-buy">
-                      <Button color="blue" onClick={() => setOpen(true)}>
+                      <Button
+                        color="blue"
+                        onClick={() => setOpen(true)}
+                        className="first-btn"
+                      >
                         Buy/Sell Stock
                       </Button>
                     </Grid.Column>
@@ -70,7 +74,9 @@ function Portfolio() {
                 >
                   <div>
                     <span>Total Portfolio Value</span>
-                    <h4>N30,000,000</h4>
+                    <h4>
+                      <span>&#x20A6;30,000,000</span>
+                    </h4>
                   </div>
                   <div>
                     <span>24h Change</span>
@@ -82,7 +88,9 @@ function Portfolio() {
                   </div>
                   <div>
                     <span>Dividends</span>
-                    <h4>N3000</h4>
+                    <h4>
+                      <span>&#x20A6;3000</span>
+                    </h4>
                   </div>
                   <div>
                     <span>Purchased</span>

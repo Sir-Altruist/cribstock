@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Menu, Sidebar, Grid, Segment, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Chart from "../../assets/icons/chart.svg";
+import Shop from "../../assets/icons/shop.svg";
 
 function StockhistoryMobile({
   activeItem,
@@ -74,11 +75,15 @@ function StockhistoryMobile({
                 >
                   <div>
                     <p>Price</p>
-                    <p style={{ fontWeight: "bold" }}>N3,000</p>
+                    <p style={{ fontWeight: "bold" }}>
+                      <span>&#x20A6;3,000</span>
+                    </p>
                   </div>
                   <div>
                     <p>Market cap</p>
-                    <p style={{ fontWeight: "bold" }}>N7,000,000</p>
+                    <p style={{ fontWeight: "bold" }}>
+                      <span>&#x20A6;7,000,000</span>
+                    </p>
                   </div>
                   <div>
                     <p>24h</p>
@@ -102,8 +107,12 @@ function StockhistoryMobile({
                 >
                   <div>
                     <p style={{ paddingRight: "1rem" }}>Volume</p>
-                    <p style={{ fontWeight: "bold" }}>N3.8M</p>
-                    <small>N8.8M</small>
+                    <p style={{ fontWeight: "bold" }}>
+                      <span>&#x20A6;3.8M</span>
+                    </p>
+                    <small>
+                      <span>&#x20A6;8.8M</span>
+                    </small>
                   </div>
                   <div>
                     <p style={{ textAlign: "center" }}>Circulating Supply</p>
@@ -152,7 +161,9 @@ function StockhistoryMobile({
                   </p>
                 </div>
                 <div className="history_card">
-                  <div className="history_circle"></div>
+                  <div className="history_circle">
+                    <Image src={Shop} style={{ margin: "25% auto" }} />
+                  </div>
                   <div
                     style={{
                       position: "absolute",
@@ -174,7 +185,7 @@ function StockhistoryMobile({
                     }}
                   >
                     <Button
-                      color="blue"
+                      className="history-btn"
                       as={Link}
                       size="tiny"
                       to="/stock/history2"

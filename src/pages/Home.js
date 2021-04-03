@@ -56,6 +56,7 @@ function Home({ properties }) {
                     }}
                     as={Link}
                     to="/"
+                    className="first-btn"
                   >
                     Get Started
                   </Button>
@@ -64,7 +65,7 @@ function Home({ properties }) {
                   <h1
                     style={{
                       fontWeight: "700",
-                      fontSize: "28px",
+                      fontSize: "30px",
                       color: "#132054",
                     }}
                   >
@@ -88,6 +89,7 @@ function Home({ properties }) {
                     }}
                     as={Link}
                     to="/"
+                    className="first-btn"
                   >
                     Get Started
                   </Button>
@@ -116,7 +118,12 @@ function Home({ properties }) {
                   marginBottom: "5rem",
                 }}
               >
-                <Link centered to="/" style={{ color: "white" }}>
+                <Link
+                  centered
+                  to="/"
+                  style={{ color: "white" }}
+                  className="first-btn"
+                >
                   Explore Stocks
                 </Link>
               </Button>
@@ -129,14 +136,16 @@ function Home({ properties }) {
               as="h1"
               style={{
                 color: "#132054",
+                textAlign: "center",
               }}
+              className="how_header"
             >
               How Cribstock Works
             </Header>
             <Grid centered>
               <Grid.Row>
                 <Grid.Column computer={9} mobile={16}>
-                  <p>
+                  <p className="how_header" style={{ textAlign: "center" }}>
                     Massa tempor nec feugiat nisl pretium. Egestas fringilla
                     phasellus faucibus scelerisque eleifend donec. Porta nibh
                     vene natis cras sed felis eget velit aliquet.
@@ -166,8 +175,8 @@ function Home({ properties }) {
                       Massa tempor nec feugiat nisl pretium. Egestas fringilla
                       phasellus faucibus scelerisque eleifend donec. Porta nibh
                     </p>
-                    <Button color="white">
-                      <Link to="/" style={{ color: "black" }}>
+                    <Button className="second-btn">
+                      <Link to="/" style={{ color: "#2f2f2f" }}>
                         Link your property
                       </Link>
                     </Button>
@@ -194,8 +203,8 @@ function Home({ properties }) {
                       Massa tempor nec feugiat nisl pretium. Egestas fringilla
                       phasellus faucibus scelerisque eleifend donec. Porta nibh
                     </p>
-                    <Button color="white">
-                      <Link to="/" style={{ color: "black" }}>
+                    <Button className="second-btn">
+                      <Link to="/" style={{ color: "#2f2f2f" }}>
                         Link your property
                       </Link>
                     </Button>
@@ -229,18 +238,37 @@ function Home({ properties }) {
               Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus
               faucibus scelerisque
             </p>
-            <div style={{ marginTop: "5rem" }}>
-              <Input
-                type="email"
-                name="email"
-                placeholder="enter your email address"
-                action={{
-                  color: "blue",
-                  content: "Send",
-                }}
-                fluid
-              />
-            </div>
+            <Grid only="computer">
+              <Grid.Row>
+                <Grid.Column width={3} only="computer"></Grid.Column>
+                <Grid.Column
+                  width={13}
+                  only="computer"
+                  style={{ marginTop: "1rem" }}
+                >
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="enter your email address"
+                    style={{ width: "70%" }}
+                  />
+                  <Button className="history-btn">Send</Button>
+                </Grid.Column>
+                <Grid.Column
+                  width={16}
+                  only="mobile"
+                  style={{ marginTop: "1rem" }}
+                >
+                  <Input
+                    type="email"
+                    name="email"
+                    placeholder="enter your email address"
+                    style={{ width: "80%" }}
+                  />
+                  <Button className="history-btn">Send</Button>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Container>
         </Segment>
       </main>

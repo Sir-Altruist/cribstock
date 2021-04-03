@@ -168,7 +168,7 @@ hr {
   width: 35%;
   height: 7rem;
   border-radius: 50%;
-  background-color: #c4c4c4;
+  background-color: #faf5f1;
   position: absolute;
   top: 8%;
   left: 33%;
@@ -191,9 +191,24 @@ hr {
 .dash-btn {
   padding-right: 2rem;
   padding-top: 2rem;
+  background-color: #3861fb !important;
 }
 .details-btn {
   width: 63%;
+  background-color: #3861fb !important;
+  color: #ffffff !important;
+}
+.first-btn {
+  background-color: #3861fb !important;
+}
+.second-btn {
+  background-color: #ffffff !important;
+}
+.history-btn {
+  background-color: #3861fb !important;
+  color: #ffffff !important;
+}
+.continue-btn {
   background-color: #3861fb !important;
   color: #ffffff !important;
 }
@@ -307,5 +322,11 @@ hr {
     width: 80%;
     margin: 0 auto;
     padding: 0 auto;
+  }
+  .how_header {
+    text-align: left !important;
+  }
+  .newsletter {
+    width: 70%;
   }
 }

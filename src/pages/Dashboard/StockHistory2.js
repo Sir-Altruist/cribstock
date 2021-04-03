@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Container, Grid, Segment, Image, Button } from "semantic-ui-react";
 import Chart from "../../assets/icons/chart.svg";
+import Shop from "../../assets/icons/shop.svg";
 import { Stockhistory2Mobile } from "../../components/Mobile";
 import Sidebar from "../../components/Sidebar";
+import { Link } from "react-router-dom";
 
 function StockHistory2() {
   const [activeItem, setActiveItem] = useState("stock");
@@ -43,57 +45,65 @@ function StockHistory2() {
                     <div
                       style={{
                         display: "flex",
-                        justifyContent: "space-evenly",
-                        marginTop: "5rem",
-                        marginLeft: "-6rem",
+                        justifyContent: "space-between",
+                        marginTop: "10rem",
                       }}
                     >
-                      <p>Price</p>
-                      <p>Market cap</p>
-                      <p>24h</p>
-                      <p>1Y</p>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-evenly",
-                        marginLeft: "-6rem",
-                      }}
-                    >
-                      <p style={{ fontWeight: "bold" }}>N3,000</p>
-                      <p style={{ fontWeight: "bold" }}>N7,000,000</p>
-                      <p style={{ fontWeight: "bold", color: "#E41111" }}>
-                        -9.0%
-                      </p>
-                      <p style={{ fontWeight: "bold", color: "#12A672" }}>
-                        +9.0%
-                      </p>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-evenly",
-                        marginTop: "1rem",
-                        marginLeft: "-6rem",
-                      }}
-                    >
-                      <p>Volume</p>
-                      <p>Circulating Supply</p>
-                      <p>Average Volume</p>
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "space-evenly",
-                        marginLeft: "-6rem",
-                      }}
-                    >
-                      <div style={{ marginLeft: "-3rem" }}>
-                        <p style={{ fontWeight: "bold" }}>N3.8M</p>
-                        <small>N8.8M</small>
+                      <div>
+                        <p>Price</p>
+                        <p style={{ fontWeight: "bold" }}>
+                          <span>&#x20A6;3,000</span>
+                        </p>
                       </div>
-                      <p style={{ fontWeight: "bold" }}>1000</p>
-                      <p style={{ fontWeight: "bold" }}>9,80,190</p>
+                      <div>
+                        <p>Market cap</p>
+                        <p style={{ fontWeight: "bold" }}>
+                          <span>&#x20A6;7,000,000</span>
+                        </p>
+                      </div>
+                      <div>
+                        <p>24h</p>
+                        <p style={{ fontWeight: "bold", color: "#E41111" }}>
+                          -9.0%
+                        </p>
+                      </div>
+                      <div>
+                        <p>1Y</p>
+                        <p style={{ fontWeight: "bold", color: "#12A672" }}>
+                          +9.0%
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        margin: "2rem 0 3rem 0",
+                      }}
+                    >
+                      <div>
+                        <p style={{ paddingRight: "1rem" }}>Volume</p>
+                        <p style={{ fontWeight: "bold" }}>
+                          <span>&#x20A6;3.8M</span>
+                        </p>
+                        <small>
+                          <span>&#x20A6;8.8M</span>
+                        </small>
+                      </div>
+                      <div>
+                        <p style={{ textAlign: "center" }}>
+                          Circulating Supply
+                        </p>
+                        <p style={{ fontWeight: "bold", textAlign: "center" }}>
+                          1000
+                        </p>
+                      </div>
+                      <div>
+                        <p style={{ textAlign: "right" }}>Average Volume</p>
+                        <p style={{ fontWeight: "bold", textAlign: "right" }}>
+                          9,80,190
+                        </p>
+                      </div>
                     </div>
                     <div style={{ paddingTop: "5rem" }}>
                       <h3>Stock History</h3>
@@ -131,7 +141,9 @@ function StockHistory2() {
                   </Grid.Column>
                   <Grid.Column computer={5}>
                     <div className="history_card">
-                      <div className="history_circle"></div>
+                      <div className="history_circle">
+                        <Image src={Shop} style={{ margin: "25% auto" }} />
+                      </div>
                       <div
                         style={{
                           position: "absolute",
@@ -152,7 +164,7 @@ function StockHistory2() {
                           top: "21rem",
                         }}
                       >
-                        <Button color="blue">Sell Stock</Button>
+                        <Button className="history-btn">Sell Stock</Button>
                       </div>
                     </div>
                   </Grid.Column>
@@ -288,7 +300,13 @@ function StockHistory2() {
                           top: "21rem",
                         }}
                       >
-                        <Button color="blue">Sell Stock</Button>
+                        <Button
+                          as={Link}
+                          to="/stock/history2"
+                          className="history-btn"
+                        >
+                          Sell Stock
+                        </Button>
                       </div>
                     </div>
                   </Grid.Column>

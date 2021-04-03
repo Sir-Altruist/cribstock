@@ -1,6 +1,7 @@
 import React from "react";
-import { Modal, Segment, Container, Header } from "semantic-ui-react";
+import { Modal, Segment, Container, Header, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import Cart from "../../assets/icons/cart.svg";
 
 function StockModal({ open, handleClose }) {
   return (
@@ -26,7 +27,7 @@ function StockModal({ open, handleClose }) {
             </Header>
             <div
               style={{
-                width: "85%",
+                minwidth: "85%",
                 minHeight: "8rem",
                 backgroundColor: "#F8FAFD",
                 borderRadius: "8px",
@@ -36,17 +37,20 @@ function StockModal({ open, handleClose }) {
             >
               <div
                 style={{
-                  width: "42px",
-                  height: "42px",
-                  backgroundColor: "#C4C4C4",
+                  width: "35px",
+                  height: "35px",
                   borderRadius: "50%",
-                  marginTop: "2.5rem",
-                  marginLeft: "3rem",
+                  marginTop: "2rem",
+                  marginLeft: "2rem",
                 }}
-              ></div>
-              <div style={{ marginTop: "2rem", marginLeft: "2rem" }}>
+              >
+                <Image src={Cart} />
+              </div>
+              <div style={{ marginTop: "2rem", marginLeft: "1rem" }}>
                 <Link to="/portfolio/buystock">
-                  <h3 style={{ color: "#2F2F2F" }}>Explore Stocks</h3>
+                  <h3 style={{ color: "#2F2F2F", paddingBottom: ".2rem" }}>
+                    Explore Stocks
+                  </h3>
                 </Link>
                 <p>Browse and invest in your various properties</p>
               </div>
@@ -62,7 +66,7 @@ function StockModal({ open, handleClose }) {
           <Container>
             <div
               style={{
-                width: "90%",
+                minwidth: "90%",
                 minHeight: "8rem",
                 backgroundColor: "#F8FAFD",
                 borderRadius: "8px",
@@ -72,17 +76,20 @@ function StockModal({ open, handleClose }) {
             >
               <div
                 style={{
-                  width: "42px",
-                  height: "42px",
-                  backgroundColor: "#C4C4C4",
+                  width: "35px",
+                  height: "35px",
                   borderRadius: "50%",
-                  marginTop: "2.5rem",
-                  marginLeft: "3rem",
+                  marginTop: "2rem",
+                  marginLeft: "2rem",
                 }}
-              ></div>
-              <div style={{ marginTop: "2rem", marginLeft: "2rem" }}>
+              >
+                <Image src={Cart} />
+              </div>
+              <div style={{ marginTop: "2rem", marginLeft: "1rem" }}>
                 <Link to="/portfolio/sellstock">
-                  <h3 style={{ color: "#2F2F2F" }}>Sell Stocks</h3>
+                  <h3 style={{ color: "#2F2F2F", paddingBottom: ".2rem" }}>
+                    Sell Stocks
+                  </h3>
                 </Link>
                 <p>Sell your already owned stocks </p>
               </div>
