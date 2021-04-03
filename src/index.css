@@ -75,10 +75,10 @@ main {
 #section-2 {
   padding: 50px 0;
   background-color: #f9fbfd;
-  display: flex;
+  /* display: flex;
   flex-flow: column wrap;
   justify-content: center;
-  min-height: calc(100vh - 85.38px);
+  min-height: calc(100vh - 85.38px); */
 }
 #section-3 {
   padding: 100px 0;
