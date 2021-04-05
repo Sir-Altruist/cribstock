@@ -21,7 +21,13 @@ function StocksearchMobile({
   return (
     <Grid columns={1} style={{ marginTop: "7rem" }}>
       <Grid.Column style={{ marginLeft: "1rem" }}>
-        <Button onClick={visibilityToggle} content="Sidebar" />
+        <Button
+          icon
+          onClick={visibilityToggle}
+          style={{ backgroundColor: "transparent" }}
+        >
+          <Icon name={visible ? "times" : "bars"} size="large" />
+        </Button>
       </Grid.Column>
       <Grid.Column>
         <Sidebar.Pushable>

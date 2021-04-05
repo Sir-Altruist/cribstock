@@ -1,5 +1,13 @@
 import React from "react";
-import { Button, Menu, Sidebar, Grid, Segment, Image } from "semantic-ui-react";
+import {
+  Button,
+  Menu,
+  Sidebar,
+  Grid,
+  Segment,
+  Image,
+  Icon,
+} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Chart from "../../assets/icons/chart.svg";
 import Shop from "../../assets/icons/shop.svg";
@@ -15,7 +23,13 @@ function StockhistoryMobile({
     <React.Fragment>
       <Grid columns={1} style={{ marginTop: "7rem" }}>
         <Grid.Column style={{ marginLeft: "1.5rem" }}>
-          <Button onClick={visibilityToggle} content="Sidebar" />
+          <Button
+            icon
+            onClick={visibilityToggle}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <Icon name={visible ? "times" : "bars"} size="large" />
+          </Button>
         </Grid.Column>
         <Grid.Column>
           <Sidebar.Pushable>
