@@ -6,6 +6,7 @@ import {
   Grid,
   Segment,
   Container,
+  Icon,
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { StockModal } from "../Modal";
@@ -26,7 +27,13 @@ function PortfolioMobile({
     <React.Fragment>
       <Grid columns={1} style={{ marginTop: "7rem" }}>
         <Grid.Column style={{ marginLeft: "1.5rem" }}>
-          <Button onClick={visibilityToggle} content="Sidebar" />
+          <Button
+            icon
+            onClick={visibilityToggle}
+            style={{ backgroundColor: "transparent" }}
+          >
+            <Icon name={visible ? "times" : "bars"} size="large" />
+          </Button>
         </Grid.Column>
         <Grid.Column>
           <Sidebar.Pushable>
@@ -96,45 +103,58 @@ function PortfolioMobile({
                     width: "100%",
                     minHeight: "10rem",
                     margin: "2rem 0",
-                    padding: "0 2rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
+                    // padding: "0 2rem",
                     backgroundColor: "#FAF5F1",
                     border: "1px solid #FAF5F1",
                     borderRadius: "8px",
                   }}
                 >
-                  <div style={{ paddingBottom: "4rem" }}>
-                    <span>Total Portfolio Value</span>
-                    <h4>
-                      <span>&#x20A6;30,000,000</span>
-                    </h4>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                    }}
+                  >
+                    <div>
+                      <span>Total Portfolio Value</span>
+                      <h4>
+                        <span>&#x20A6;30,000,000</span>
+                      </h4>
+                    </div>
+                    <div style={{ textAlign: "center" }}>
+                      <span>24h Change</span>
+                      <h4 style={{ color: "#12A672" }}>+9.0%</h4>
+                    </div>
+                    <div>
+                      <span>No of stocks</span>
+                      <h4 style={{ textAlign: "right" }}>3000</h4>
+                    </div>
                   </div>
-                  <div style={{ paddingBottom: "4rem" }}>
-                    <span>24h Change</span>
-                    <h4 style={{ color: "#12A672", textAlign: "center" }}>
-                      +9.0%
-                    </h4>
-                  </div>
-                  <div style={{ paddingBottom: "4rem" }}>
-                    <span>No of stocks</span>
-                    <h4 style={{ textAlign: "right" }}>3000</h4>
-                  </div>
-                  <div style={{ paddingBottom: "1rem" }}>
-                    <span>Dividends</span>
-                    <h4>
-                      <span>&#x20A6;3000</span>
-                    </h4>
-                  </div>
-                  <div style={{ paddingBottom: "1rem" }}>
-                    <span>Purchased</span>
-                    <h4 style={{ textAlign: "center" }}>1500</h4>
-                  </div>
-                  <div style={{ paddingBottom: "1rem" }}>
-                    <span>Sold</span>
-                    <h4 style={{ textAlign: "right" }}>1500</h4>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-between",
+                      flexWrap: "wrap",
+                      paddingTop: "2rem",
+                    }}
+                  >
+                    <div>
+                      <span>Dividends</span>
+                      <h4>
+                        <span>&#x20A6;3000</span>
+                      </h4>
+                    </div>
+                    <div>
+                      <span>Purchased</span>
+                      <h4 style={{ textAlign: "center" }}>1500</h4>
+                    </div>
+                    <div>
+                      <span>Sold</span>
+                      <h4 style={{ textAlign: "center" }}>1500</h4>
+                    </div>
                   </div>
                 </section>
                 <section

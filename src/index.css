@@ -321,11 +321,11 @@ hr {
   .sell-buy {
     margin-left: -2rem;
   }
-  .details-btn {
-    width: 100%;
+  .mobile-details-btn {
+    width: 94%;
     background-color: #3861fb !important;
     color: #ffffff !important;
-    margin-left: -2rem !important;
+    /* margin-left: -2rem !important; */
   }
   .history_card {
     width: 80%;

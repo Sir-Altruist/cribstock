@@ -263,7 +263,7 @@ function Home({ properties }) {
                     type="email"
                     name="email"
                     placeholder="enter your email address"
-                    style={{ width: "80%" }}
+                    style={{ width: "70%" }}
                   />
                   <Button className="history-btn">Send</Button>
                 </Grid.Column>

@@ -1,5 +1,13 @@
 import React from "react";
-import { Button, Menu, Sidebar, Grid, Form, Segment } from "semantic-ui-react";
+import {
+  Icon,
+  Button,
+  Menu,
+  Sidebar,
+  Grid,
+  Form,
+  Segment,
+} from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
 function BuystockMobile({
@@ -12,7 +20,13 @@ function BuystockMobile({
   return (
     <Grid columns={1} style={{ marginTop: "7rem" }}>
       <Grid.Column style={{ marginLeft: "1rem" }}>
-        <Button onClick={visibilityToggle} content="Sidebar" />
+        <Button
+          icon
+          onClick={visibilityToggle}
+          style={{ backgroundColor: "transparent" }}
+        >
+          <Icon name={visible ? "times" : "bars"} size="large" />
+        </Button>
       </Grid.Column>
       <Grid.Column>
         <Sidebar.Pushable>
@@ -110,8 +124,8 @@ function BuystockMobile({
                   name="price"
                   label="Stock Price"
                 />
-                <div style={{ paddingLeft: "3rem", marginTop: "2rem" }}>
-                  <Button type="submit" className="details-btn">
+                <div style={{ paddingLeft: "1rem", marginTop: "2rem" }}>
+                  <Button type="submit" className="mobile-details-btn">
                     Buy Stock
                   </Button>
                 </div>
