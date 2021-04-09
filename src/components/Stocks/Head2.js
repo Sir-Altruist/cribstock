@@ -1,8 +1,8 @@
 import React from "react";
 import { Table } from "semantic-ui-react";
-import Stock from "./Stock";
+import Stock2 from "./Stock2";
 
-function Head() {
+function Head2() {
   return (
     <div style={{ overflowX: "auto" }}>
       <Table basic="very" unstackable>
@@ -81,14 +81,14 @@ function Head() {
           </Table.Row>
         </Table.Header>
         <Table.Body>
-          <Stock />
-          <Stock />
-          <Stock />
-          <Stock />
+          <Stock2 />
+          <Stock2 />
+          <Stock2 />
+          <Stock2 />
         </Table.Body>
       </Table>
     </div>
   );
 }
 
-export default Head;
+export default Head2;

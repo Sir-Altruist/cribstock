@@ -101,7 +101,7 @@ function WelcomeMobile({
                       details.
                     </p>
                   </div>
-                  <div style={{ marginLeft: "19rem" }}>
+                  <div style={{ marginLeft: "13rem" }}>
                     <Button
                       className="continue-btn"
                       as={Link}

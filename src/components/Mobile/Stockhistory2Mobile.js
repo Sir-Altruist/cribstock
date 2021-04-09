@@ -100,13 +100,19 @@ function Stockhistory2Mobile({
                     </p>
                   </div>
                   <div>
-                    <p>24h</p>
-                    <p style={{ fontWeight: "bold", color: "#E41111" }}>
+                    <p>(30d - 1y)</p>
+                    <p
+                      style={{
+                        fontWeight: "bold",
+                        color: "#E41111",
+                        textAlign: "center",
+                      }}
+                    >
                       -9.0%
                     </p>
                   </div>
                   <div>
-                    <p>1Y</p>
+                    <p style={{ textAlign: "center" }}>1y</p>
                     <p style={{ fontWeight: "bold", color: "#12A672" }}>
                       +9.0%
                     </p>
@@ -120,13 +126,11 @@ function Stockhistory2Mobile({
                   }}
                 >
                   <div>
-                    <p style={{ paddingRight: "1rem" }}>Volume</p>
+                    <p style={{ paddingRight: "1rem" }}>Volume (24hrs)</p>
                     <p style={{ fontWeight: "bold" }}>
                       <span>&#x20A6;3.8M</span>
                     </p>
-                    <small>
-                      <span>&#x20A6;8.8M</span>
-                    </small>
+                    <small>500</small>
                   </div>
                   <div>
                     <p style={{ textAlign: "center" }}>Circulating Supply</p>
@@ -202,7 +206,7 @@ function Stockhistory2Mobile({
                       className="history-btn"
                       as={Link}
                       size="tiny"
-                      to="/stock/history2"
+                      to="/portfolio/sellstock"
                     >
                       Sell Stock
                     </Button>

@@ -120,7 +120,7 @@ function BuystockMobile({
                 <Form.Input
                   id="buy-form-price"
                   type="text"
-                  placeholder="0.0000"
+                  placeholder="₦0.0000"
                   name="price"
                   label="Stock Price"
                 />

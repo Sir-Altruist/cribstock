@@ -51,14 +51,14 @@ function SellStock() {
               <Form.Input
                 id="sell-form-price"
                 type="text"
-                placeholder="$0.0000"
+                placeholder="₦0.0000"
                 name="price"
                 label="Price Per Stock"
               />
               <Form.Input
                 id="sell-form-total"
                 type="text"
-                placeholder="$0.0000"
+                placeholder="₦0.0000"
                 name="total"
                 label="Total Price"
               />

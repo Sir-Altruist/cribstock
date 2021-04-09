@@ -1,13 +1,32 @@
 import React from "react";
-import { Image } from "semantic-ui-react";
-import Logo from "../../../assets/icons/logo.svg";
+import { Link } from "react-router-dom";
 
 function Footer1() {
   return (
     <div>
-      <Image src={Logo} alt="logo" />
-      <p>58 Howard Street #2 San Francisco</p>
-      <p>contact@homeid.com</p>
+      <h2
+        style={{ color: "#132054", paddingTop: "2rem", paddingBottom: "1rem" }}
+      >
+        Properties
+      </h2>
+      <p>
+        <Link style={{ color: "black" }}>Property Stcoks</Link>
+      </p>
+      <p>
+        <Link style={{ color: "black" }}>Free Training</Link>
+      </p>
+      <p>
+        <Link style={{ color: "black" }}>Portfolio Tracker</Link>
+      </p>
+      <p>
+        <Link style={{ color: "black" }}>Order Book</Link>
+      </p>
+      <p>
+        <Link style={{ color: "black" }}>World Brick Day</Link>
+      </p>
+      <p>
+        <Link style={{ color: "black" }}>Trading Sessions</Link>
+      </p>
     </div>
   );
 }

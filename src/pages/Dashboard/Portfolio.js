@@ -1,18 +1,22 @@
 import React, { useState } from "react";
 import { Grid, Segment, Button, Container } from "semantic-ui-react";
-import { Head } from "../../components/Stocks";
+import { Head2 } from "../../components/Stocks";
 import Sidebar from "../../components/Sidebar";
 import { StockModal } from "../../components/Modal";
 import { PortfolioMobile } from "../../components/Mobile";
 
 function Portfolio() {
   const [activeItem, setActiveItem] = useState("portfolio");
+  const handleClick = (e, { name }) => {
+    setActiveItem(name);
+  };
   const [open, setOpen] = useState(false);
   const handleClose = () => {
     setOpen(false);
   };
-  const handleClick = (e, { name }) => {
-    setActiveItem(name);
+  const [activeBtn, setActiveBtn] = useState("Purchases");
+  const changeFocus = (e, { name }) => {
+    setActiveBtn(name);
   };
   const [visible, setVisible] = useState(false);
   const visibilityToggle = () => setVisible(!visible);
@@ -48,7 +52,7 @@ function Portfolio() {
                     <Grid.Column width={5}></Grid.Column>
                     <Grid.Column width={5} className="sell-buy">
                       <Button
-                        color="blue"
+                        // color="blue"
                         onClick={() => setOpen(true)}
                         className="first-btn"
                       >
@@ -79,7 +83,7 @@ function Portfolio() {
                     </h4>
                   </div>
                   <div>
-                    <span>24h Change</span>
+                    <span>(30d - 1y) change</span>
                     <h4 style={{ color: "#12A672" }}>+9.0%</h4>
                   </div>
                   <div>
@@ -104,32 +108,47 @@ function Portfolio() {
                 <section
                   style={{
                     width: "86%",
-                    height: "3rem",
-                    display: "flex",
+                    height: "3.5rem",
                     border: "1px solid #F0F2F5",
                     backgroundColor: "#F0F2F5",
+                    display: "flex",
+                    justifyContent: "center",
                   }}
                 >
-                  <div
+                  <Button.Group
                     style={{
-                      width: "50%",
-                      height: "80%",
-                      backgroundColor: "#ffffff",
-                      borderRadius: "8px",
-                      margin: "5px auto",
+                      width: "99%",
+                      height: "3rem",
+                      paddingTop: ".2rem",
                     }}
                   >
-                    <p style={{ textAlign: "center", paddingTop: ".5rem" }}>
+                    <Button
+                      compact
+                      active={activeBtn === "Purchases"}
+                      name="Purchases"
+                      onClick={changeFocus}
+                      style={{
+                        width: "50%",
+                      }}
+                    >
                       Purchased
-                    </p>
-                  </div>
-                  <div style={{ width: "50%", textAlign: "center" }}>
-                    <p style={{ paddingTop: ".7rem" }}>Sold</p>
-                  </div>
+                    </Button>
+                    <Button
+                      compact
+                      active={activeBtn === "Sales"}
+                      name="Sales"
+                      onClick={changeFocus}
+                      style={{
+                        width: "50%",
+                      }}
+                    >
+                      Sold
+                    </Button>
+                  </Button.Group>
                 </section>
                 <Grid style={{ marginTop: "5rem" }}>
                   <Grid.Row columns={1}>
-                    <Head />
+                    <Head2 />
                   </Grid.Row>
                 </Grid>
               </Container>

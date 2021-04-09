@@ -62,13 +62,13 @@ function StockHistory2() {
                         </p>
                       </div>
                       <div>
-                        <p>24h</p>
+                        <p>(30d - 1y)</p>
                         <p style={{ fontWeight: "bold", color: "#E41111" }}>
                           -9.0%
                         </p>
                       </div>
                       <div>
-                        <p>1Y</p>
+                        <p>1y</p>
                         <p style={{ fontWeight: "bold", color: "#12A672" }}>
                           +9.0%
                         </p>
@@ -82,13 +82,11 @@ function StockHistory2() {
                       }}
                     >
                       <div>
-                        <p style={{ paddingRight: "1rem" }}>Volume</p>
+                        <p style={{ paddingRight: "1rem" }}>Volume(24hrs)</p>
                         <p style={{ fontWeight: "bold" }}>
                           <span>&#x20A6;3.8M</span>
                         </p>
-                        <small>
-                          <span>&#x20A6;8.8M</span>
-                        </small>
+                        <small>500</small>
                       </div>
                       <div>
                         <p style={{ textAlign: "center" }}>
@@ -164,7 +162,13 @@ function StockHistory2() {
                           top: "21rem",
                         }}
                       >
-                        <Button className="history-btn">Sell Stock</Button>
+                        <Button
+                          as={Link}
+                          to="/portfolio/sellstock"
+                          className="history-btn"
+                        >
+                          Sell Stock
+                        </Button>
                       </div>
                     </div>
                   </Grid.Column>

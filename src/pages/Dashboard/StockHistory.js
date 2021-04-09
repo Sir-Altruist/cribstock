@@ -52,8 +52,8 @@ function StockHistory() {
                     >
                       <p>Price</p>
                       <p>Market cap</p>
-                      <p>24h</p>
-                      <p>1Y</p>
+                      <p>(30d - 1y)</p>
+                      <p>1y</p>
                     </div>
                     <div
                       style={{
@@ -83,7 +83,7 @@ function StockHistory() {
                         marginLeft: "-6rem",
                       }}
                     >
-                      <p>Volume</p>
+                      <p>Volume (24hrs)</p>
                       <p>Circulating Supply</p>
                       <p>Average Volume</p>
                     </div>
@@ -98,9 +98,7 @@ function StockHistory() {
                         <p style={{ fontWeight: "bold" }}>
                           <span>&#x20A6;3.8M</span>
                         </p>
-                        <small>
-                          <span>&#x20A6;8.8M</span>8.8M
-                        </small>
+                        <small>500</small>
                       </div>
                       <p style={{ fontWeight: "bold" }}>1000</p>
                       <p style={{ fontWeight: "bold" }}>9,80,190</p>
@@ -166,7 +164,7 @@ function StockHistory() {
                       >
                         <Button
                           as={Link}
-                          to="/stock/history2"
+                          to="/portfolio/buystock"
                           className="history-btn"
                         >
                           Buy Stock

@@ -10,7 +10,7 @@ import {
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { StockModal } from "../Modal";
-import { Head } from "../../components/Stocks";
+import { Head2 } from "../../components/Stocks";
 
 function PortfolioMobile({
   activeItem,
@@ -22,6 +22,10 @@ function PortfolioMobile({
   const [open, setOpen] = useState(false);
   const handleClose = () => {
     setOpen(false);
+  };
+  const [activeBtn, setActiveBtn] = useState("Purchases");
+  const changeFocus = (e, { name }) => {
+    setActiveBtn(name);
   };
   return (
     <React.Fragment>
@@ -100,7 +104,7 @@ function PortfolioMobile({
                 </Container>
                 <section
                   style={{
-                    width: "100%",
+                    minWidth: "90vw",
                     minHeight: "10rem",
                     margin: "2rem 0",
                     // padding: "0 2rem",
@@ -118,13 +122,13 @@ function PortfolioMobile({
                     }}
                   >
                     <div>
-                      <span>Total Portfolio Value</span>
+                      <span>T.P.V</span>
                       <h4>
                         <span>&#x20A6;30,000,000</span>
                       </h4>
                     </div>
                     <div style={{ textAlign: "center" }}>
-                      <span>24h Change</span>
+                      <span>(30d - 1y)</span>
                       <h4 style={{ color: "#12A672" }}>+9.0%</h4>
                     </div>
                     <div>
@@ -141,7 +145,7 @@ function PortfolioMobile({
                       paddingTop: "2rem",
                     }}
                   >
-                    <div>
+                    <div style={{ paddingLeft: ".7rem" }}>
                       <span>Dividends</span>
                       <h4>
                         <span>&#x20A6;3000</span>
@@ -151,7 +155,7 @@ function PortfolioMobile({
                       <span>Purchased</span>
                       <h4 style={{ textAlign: "center" }}>1500</h4>
                     </div>
-                    <div>
+                    <div style={{ paddingRight: ".7rem" }}>
                       <span>Sold</span>
                       <h4 style={{ textAlign: "center" }}>1500</h4>
                     </div>
@@ -162,30 +166,40 @@ function PortfolioMobile({
                     width: "100%",
                     height: "3rem",
                     display: "flex",
+                    justifyContent: "center",
                     border: "1px solid #F0F2F5",
                     backgroundColor: "#F0F2F5",
                   }}
                 >
-                  <div
+                  <Button.Group
                     style={{
-                      width: "50%",
+                      width: "98%",
                       height: "80%",
-                      backgroundColor: "#ffffff",
                       borderRadius: "8px",
                       margin: "5px auto",
                     }}
                   >
-                    <p style={{ textAlign: "center", paddingTop: ".5rem" }}>
+                    <Button
+                      compact
+                      active={activeBtn === "Purchases"}
+                      name="Purchases"
+                      onClick={changeFocus}
+                    >
                       Purchased
-                    </p>
-                  </div>
-                  <div style={{ width: "50%", textAlign: "center" }}>
-                    <p style={{ paddingTop: ".7rem" }}>Sold</p>
-                  </div>
+                    </Button>
+                    <Button
+                      compact
+                      active={activeBtn === "Sales"}
+                      name="Sales"
+                      onClick={changeFocus}
+                    >
+                      Sold
+                    </Button>
+                  </Button.Group>
                 </section>
                 <Grid style={{ marginTop: "1rem" }}>
                   <Grid.Row columns={1}>
-                    <Head />
+                    <Head2 />
                   </Grid.Row>
                 </Grid>
               </Segment>
