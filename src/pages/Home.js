@@ -53,9 +53,10 @@ function Home({ properties }) {
                     style={{
                       backgroundColor: "#3861FB",
                       color: "#ffffff",
+                      cursor: "pointer",
                     }}
                     as={Link}
-                    to="/"
+                    to="/register"
                     className="first-btn"
                   >
                     Get Started
@@ -86,9 +87,10 @@ function Home({ properties }) {
                     style={{
                       backgroundColor: "#3861FB",
                       color: "#ffffff",
+                      cuursor: "pointer",
                     }}
                     as={Link}
-                    to="/"
+                    to="/register"
                     className="first-btn"
                   >
                     Get Started

@@ -47,7 +47,7 @@ function StockModal({ open, handleClose }) {
                 <Image src={Cart} />
               </div>
               <div style={{ marginTop: "2rem", marginLeft: "1rem" }}>
-                <Link to="/portfolio/buystock">
+                <Link to="/stock/search">
                   <h3 style={{ color: "#2F2F2F", paddingBottom: ".2rem" }}>
                     Explore Stocks
                   </h3>

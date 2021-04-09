@@ -31,6 +31,19 @@ header {
 }
 .brand {
   cursor: pointer;
+  margin-top: 1rem;
+  margin-left: -2rem;
+}
+.brand-2 {
+  cursor: pointer;
+  margin-top: 1rem;
+}
+.brand span,
+.brand-2 span {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: black;
+  text-transform: uppercase;
 }
 .nav-menu {
   display: grid;
@@ -54,7 +67,9 @@ header {
 .nav-link:hover {
   color: #0b1332;
 }
-
+.buttons-2 {
+  margin-left: 15rem !important;
+}
 .menu-icon {
   display: none !important;
 }
@@ -84,10 +99,6 @@ main {
 #section-2 {
   padding: 50px 0;
   background-color: #f9fbfd;
-  /* display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  min-height: calc(100vh - 85.38px); */
 }
 #section-3 {
   padding: 100px 0;
@@ -154,11 +165,13 @@ hr {
 .ui.form input {
   background-color: #f0f2f5 !important;
 }
+.form-btn-cover {
+  margin: 5px 0 10px 3rem !important;
+}
 .form-btn {
-  width: 58%;
+  width: 63%;
   background-color: #3861fb !important;
   color: #ffffff !important;
-  margin: 5px 0 10px 3rem !important;
 }
 .details {
   background-color: #ffffff !important;
@@ -209,6 +222,7 @@ hr {
 }
 .first-btn {
   background-color: #3861fb !important;
+  color: #ffffff !important;
 }
 .second-btn {
   background-color: #ffffff !important;
@@ -220,6 +234,9 @@ hr {
 .continue-btn {
   background-color: #3861fb !important;
   color: #ffffff !important;
+}
+.ui.button.active {
+  background: white !important;
 }
 
 @media screen and (max-width: 768px) {
@@ -243,7 +260,7 @@ hr {
   }
   .nav-menu.active {
     background: #ffffff;
-    left: 0;
+    left: 0 !important;
     min-width: 100vw !important;
     opacity: 1;
     transition: all 1s ease;
@@ -259,22 +276,38 @@ hr {
     display: inline-block !important;
     cursor: pointer;
   }
-  .buttons {
+  .buttons-2 {
     display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 0 !important;
+    margin-bottom: 2.5rem !important;
   }
   .primary-btn {
     background-color: #3861fb !important;
     color: #ffffff !important;
-    width: 53%;
+    min-width: 70% !important;
     height: 2rem !important;
-    margin-right: -2.5rem !important;
-    padding-bottom: 1.5rem !important;
-    padding-right: 5rem !important;
+    margin-top: 2rem !important;
   }
   .btn {
-    font-size: 0.9rem !important;
-    font-stretch: expanded !important;
+    font-size: 1rem !important;
+    text-align: center;
+    padding: 1rem;
+    min-width: 100% !important;
+    display: table !important;
   }
+  .btn-1-mobile {
+    min-width: 100%;
+    display: table;
+    text-align: center !important;
+  }
+  .btn-2-mobile {
+    min-width: 100% !important;
+    display: table;
+    text-align: center !important;
+  }
+
   .realtor {
     margin-left: -0.5rem;
     margin-top: 2rem;
@@ -300,9 +333,11 @@ hr {
     width: 90%;
     margin: 10px 1rem 5px 1rem !important;
   }
-  .form-btn {
-    width: 90%;
+  .form-btn-cover {
     margin: 10px 1rem 5px 1rem !important;
+  }
+  .form-btn {
+    width: 95%;
   }
   .login-texts {
     width: 90%;
@@ -325,7 +360,9 @@ hr {
     width: 94%;
     background-color: #3861fb !important;
     color: #ffffff !important;
-    /* margin-left: -2rem !important; */
+  }
+  .continue-btn {
+    margin-left: -3rem !important;
   }
   .history_card {
     width: 80%;
@@ -337,5 +374,16 @@ hr {
   }
   .newsletter {
     width: 70%;
+  }
+  .brand {
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+  .brand span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
   }
 }

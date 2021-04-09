@@ -92,14 +92,14 @@ function SellstockMobile({
                 <Form.Input
                   id="sell-form-dividend"
                   type="text"
-                  placeholder="$0.0000"
+                  placeholder="₦0.0000"
                   name="dividend"
                   label="Price Per Stock"
                 />
                 <Form.Input
                   id="buy-form-appreciation"
                   type="text"
-                  placeholder="$0.0000"
+                  placeholder="₦0.0000"
                   name="appreciation"
                   label="Total Price"
                 />

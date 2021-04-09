@@ -102,7 +102,7 @@ function StockDashboard() {
                   <Image src={Cart} />
                 </div>
                 <div style={{ marginTop: "3rem", marginLeft: "2rem" }}>
-                  <Link to="/stock/history">
+                  <Link to="/portfolio/sellstock">
                     <h3 style={{ color: "#132054" }}>Sell Stocks</h3>
                   </Link>
                   <p style={{ paddingTop: "1rem" }}>

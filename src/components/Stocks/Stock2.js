@@ -4,7 +4,7 @@ import Bedroom from "../../assets/images/bedroom.jpg";
 import { Table } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 
-function Stock() {
+function Stock2() {
   return (
     <>
       <Table.Row>
@@ -27,7 +27,7 @@ function Stock() {
                   }}
                 >
                   <Link
-                    to="/stock/history"
+                    to="/stock/history2"
                     style={{ color: "#484848", textDecoration: "none" }}
                   >
                     Three Bedroom Flat
@@ -124,4 +124,4 @@ function Stock() {
   );
 }
 
-export default Stock;
+export default Stock2;

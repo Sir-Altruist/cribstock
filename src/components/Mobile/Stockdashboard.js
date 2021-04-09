@@ -141,7 +141,7 @@ function StockdashboardMobile({
                     <Image src={Cart} size="tiny" />
                   </div>
                   <div style={{ marginTop: "3rem", marginLeft: "1rem" }}>
-                    <Link to="/stock/history">
+                    <Link to="/portfolio/sellstock">
                       <h3 style={{ color: "#132054" }}>Sell Stocks</h3>
                     </Link>
                     <p style={{ paddingTop: "1rem", textAlign: "left" }}>

@@ -39,16 +39,18 @@ function Login() {
         </div>
         <Grid>
           <Grid.Column textAlign="center">
-            <Button
-              type="submit"
-              className="form-btn"
-              as={Link}
-              to="/dashboard/index"
-            >
-              Login
-            </Button>
+            <div className="form-btn-cover">
+              <Button
+                type="submit"
+                className="form-btn"
+                as={Link}
+                to="/dashboard/index"
+              >
+                Login
+              </Button>
+            </div>
             <p style={{ textAlign: "center", padding: "10px 0 10px 3rem" }}>
-              Do not have an account? <Link to="/login">Register</Link>
+              Do not have an account? <Link to="/register">Register</Link>
             </p>
           </Grid.Column>
         </Grid>

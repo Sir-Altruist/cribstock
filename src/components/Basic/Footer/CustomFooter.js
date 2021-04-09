@@ -1,59 +1,95 @@
 import React from "react";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Grid, Segment, Image } from "semantic-ui-react";
+import Logo from "../../../assets/images/logo.png";
 import Footer1 from "./Footer1";
 import Footer2 from "./Footer2";
 import Footer3 from "./Footer3";
 import Footer4 from "./Footer4";
-import Footer5 from "./Footer5";
 
 function CustomFooter() {
   return (
-    <footer
-      style={{
-        paddingTop: "50px",
-        paddingBottom: "150px",
-      }}
-    >
-      <Container>
-        <Grid>
-          <Grid.Row only="computer">
-            <Grid.Column computer={6}>
-              <Footer1 />
-            </Grid.Column>
-            <Grid.Column computer={3}>
-              <Footer2 />
-            </Grid.Column>
-            <Grid.Column computer={3}>
-              <Footer3 />
-            </Grid.Column>
-            <Grid.Column computer={2}>
-              <Footer4 />
-            </Grid.Column>
-            <Grid.Column computer={2}>
-              <Footer5 />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row only="mobile">
-            <Grid.Column>
-              <Footer1 />
-            </Grid.Column>
-          </Grid.Row>
-          <Grid.Row only="mobile">
-            <Grid.Column width={4}>
-              <Footer2 />
-            </Grid.Column>
-            <Grid.Column width={4}>
-              <Footer3 />
-            </Grid.Column>
-            <Grid.Column width={4}>
-              <Footer4 />
-            </Grid.Column>
-            <Grid.Column width={4}>
-              <Footer5 />
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
-      </Container>
+    <footer>
+      <Segment
+        vertical
+        basic
+        style={{
+          width: "100%",
+          minHeight: "100vh",
+          paddingTop: "7rem",
+        }}
+      >
+        <Container>
+          <Grid>
+            <Grid.Row only="computer">
+              <div className="brand-2">
+                <Image
+                  src={Logo}
+                  alt="logo"
+                  style={{
+                    width: "3.5rem",
+                    height: "3.5rem",
+                    marginBottom: "1rem",
+                    marginRight: "-.5rem",
+                  }}
+                  avatar
+                />
+                <span>Cribstock</span>
+              </div>
+            </Grid.Row>
+            <Grid.Row only="computer">
+              <Grid.Column computer={3}>
+                <Footer1 />
+              </Grid.Column>
+              <Grid.Column compute={2}></Grid.Column>
+              <Grid.Column computer={3}>
+                <Footer2 />
+              </Grid.Column>
+              <Grid.Column compute={2}></Grid.Column>
+              <Grid.Column computer={3}>
+                <Footer3 />
+              </Grid.Column>
+              <Grid.Column compute={2}></Grid.Column>
+              <Grid.Column computer={3}>
+                <Footer4 />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row only="mobile">
+              <div className="brand-2">
+                <Image
+                  src={Logo}
+                  alt="logo"
+                  style={{
+                    width: "3.5rem",
+                    height: "3.5rem",
+                    marginBottom: "1rem",
+                    marginRight: "-.5rem",
+                  }}
+                  avatar
+                />
+                <span>Cribstock</span>
+              </div>
+            </Grid.Row>
+            <Grid.Row only="mobile">
+              <Grid.Column width={6}>
+                <Footer1 />
+              </Grid.Column>
+              <Grid.Column width={1}></Grid.Column>
+              <Grid.Column width={8}>
+                <Footer2 />
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row only="mobile">
+              <Grid.Column width={6}>
+                <Footer3 />
+              </Grid.Column>
+              <Grid.Column width={2}></Grid.Column>
+              <Grid.Column width={8}>
+                <Footer4 />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </Segment>
     </footer>
   );
 }

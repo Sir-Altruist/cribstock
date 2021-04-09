@@ -47,9 +47,11 @@ function Register() {
         </Grid>
         <Grid>
           <Grid.Column textAlign="center">
-            <Button type="submit" className="form-btn">
-              Register
-            </Button>
+            <div className="form-btn-cover">
+              <Button type="submit" className="form-btn">
+                Register
+              </Button>
+            </div>
             <p style={{ textAlign: "center", padding: "10px 0 10px 3rem" }}>
               Already have an account? <Link to="/login">Log in</Link>
             </p>

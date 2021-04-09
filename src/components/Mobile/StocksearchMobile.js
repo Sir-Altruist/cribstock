@@ -9,7 +9,7 @@ import {
   Search,
 } from "semantic-ui-react";
 import { Link } from "react-router-dom";
-import { Head } from "../Stocks";
+import { Head2 } from "../Stocks";
 
 function StocksearchMobile({
   activeItem,
@@ -80,7 +80,7 @@ function StocksearchMobile({
               <p style={{ paddingTop: "1rem" }}>
                 <strong>Sort by: Default</strong> <Icon name="caret down" />
               </p>
-              <Head />
+              <Head2 />
             </Segment>
           </Sidebar.Pusher>
         </Sidebar.Pushable>

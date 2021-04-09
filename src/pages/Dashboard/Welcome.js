@@ -79,7 +79,7 @@ function Welcome() {
             <Container>
               <Grid>
                 <Grid.Row>
-                  <Grid.Column computer={8} mobile={16}>
+                  <Grid.Column width={8}>
                     <div
                       style={{
                         width: "100%",
@@ -109,7 +109,7 @@ function Welcome() {
                       </div>
                     </div>
                   </Grid.Column>
-                  <Grid.Column computer={8} mobile={16}>
+                  <Grid.Column width={8}>
                     <div
                       style={{
                         width: "100%",
