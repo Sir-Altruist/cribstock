@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Button, Image, Icon } from "semantic-ui-react";
-import Logo from "../../assets/images/logo.png";
+import Logo from "../../assets/icons/logo1.svg";
+// import Logo from "../../assets/icons/logo1.svg";
 
 function CustomHeader() {
   const [open, setOpen] = useState(false);
@@ -11,20 +12,7 @@ function CustomHeader() {
     <header>
       <Container id="header">
         <Link to="/">
-          <div className="brand">
-            <Image
-              src={Logo}
-              alt="logo"
-              style={{
-                width: "3.5rem",
-                height: "3.5rem",
-                marginBottom: "1rem",
-                marginRight: "-.5rem",
-              }}
-              avatar
-            />
-            <span>Cribstock</span>
-          </div>
+          <Image src={Logo} style={{ width: "15rem", marginLeft: "-1.5rem" }} />
         </Link>
         <ul className={open ? "nav-menu active" : "nav-menu"}>
           <li name="properties" className="nav-item">

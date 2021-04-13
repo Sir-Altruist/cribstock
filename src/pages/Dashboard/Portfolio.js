@@ -61,44 +61,32 @@ function Portfolio() {
                     </Grid.Column>
                   </Grid.Row>
                 </Grid>
-                <section
-                  style={{
-                    width: "86%",
-                    minHeight: "10rem",
-                    margin: "2rem 0",
-                    padding: "0 2rem",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    flexWrap: "wrap",
-                    backgroundColor: "#FAF5F1",
-                    border: "1px solid #FAF5F1",
-                    borderRadius: "8px",
-                  }}
-                >
+                <section className="portfolio-container">
                   <div>
-                    <span>Total Portfolio Value</span>
-                    <h4>
+                    <span className="tpv">Total Portfolio Value</span>
+                    <h4 style={{ textAlign: "center" }}>
                       <span>&#x20A6;30,000,000</span>
                     </h4>
                   </div>
                   <div>
                     <span>(30d - 1y) change</span>
-                    <h4 style={{ color: "#12A672" }}>+9.0%</h4>
+                    <h4 style={{ color: "#12A672", textAlign: "center" }}>
+                      +9.0%
+                    </h4>
                   </div>
                   <div>
-                    <span>No of stocks</span>
-                    <h4>3000</h4>
+                    <span className="stock">No of stocks</span>
+                    <h4 style={{ textAlign: "center" }}>3000</h4>
                   </div>
                   <div>
                     <span>Dividends</span>
-                    <h4>
+                    <h4 style={{ textAlign: "center" }}>
                       <span>&#x20A6;3000</span>
                     </h4>
                   </div>
                   <div>
                     <span>Purchased</span>
-                    <h4>1500</h4>
+                    <h4 style={{ textAlign: "center" }}>1500</h4>
                   </div>
                   <div>
                     <span>Sold</span>
