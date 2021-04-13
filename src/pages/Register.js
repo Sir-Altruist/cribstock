@@ -87,7 +87,7 @@ function Register() {
                     Register
                   </Button>
                 </div>
-                <p style={{ textAlign: "center", padding: "10px 0 10px 3rem" }}>
+                <p style={{ textAlign: "center", padding: "10px auto" }}>
                   Already have an account? <Link to="/login">Log in</Link>
                 </p>
               </Grid.Column>

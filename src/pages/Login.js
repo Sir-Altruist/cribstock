@@ -69,7 +69,7 @@ function Login() {
                     Login
                   </Button>
                 </div>
-                <p style={{ textAlign: "center", padding: "10px 0 10px 3rem" }}>
+                <p style={{ textAlign: "center", padding: "10px auto" }}>
                   Do not have an account? <Link to="/register">Register</Link>
                 </p>
               </Grid.Column>

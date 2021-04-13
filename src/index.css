@@ -53,6 +53,7 @@ header {
   text-align: center;
   justify-content: end;
 }
+
 .nav-item {
   display: flex;
   align-items: center;
@@ -238,6 +239,19 @@ hr {
 .ui.button.active {
   background: white !important;
 }
+.portfolio-container {
+  width: 86%;
+  min-height: 10rem;
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: #faf5f1;
+  border: 1px solid #faf5f1;
+  border-radius: 8px;
+  padding: 0 2rem !important;
+}
 
 @media screen and (max-width: 768px) {
   #header {
@@ -253,7 +267,7 @@ hr {
     min-width: 100vw !important;
     min-height: 80vh;
     position: absolute;
-    top: 70px;
+    top: 70px !important;
     left: -100%;
     opacity: 1;
     transition: all 1s ease;
@@ -261,17 +275,22 @@ hr {
   .nav-menu.active {
     background: #ffffff;
     left: 0 !important;
-    min-width: 100vw !important;
+    width: 100vw !important;
+    height: 100vh !important;
     opacity: 1;
     transition: all 1s ease;
     z-index: 1;
   }
+
   .nav-link {
+    min-width: 100% !important;
     text-align: center;
     padding: 1rem;
-    min-width: 100%;
-    display: table;
+    text-align: center;
+    padding: 0 !important;
+    display: table !important;
   }
+
   .menu-icon {
     display: inline-block !important;
     cursor: pointer;
@@ -338,6 +357,9 @@ hr {
   }
   .form-btn {
     width: 95%;
+    background-color: #3861fb !important;
+    color: #ffffff !important;
+    text-align: center;
   }
   .login-texts {
     width: 90%;
@@ -385,5 +407,11 @@ hr {
     font-weight: 700;
     color: black;
     text-transform: uppercase;
+  }
+  .tpv {
+    padding-left: 2rem !important;
+  }
+  .stock {
+    padding-right: 2rem !important;
   }
 }
