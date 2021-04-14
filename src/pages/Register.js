@@ -44,8 +44,8 @@ function Register() {
             >
               Register
             </h2>
-            <Grid centered>
-              <Grid.Column textAlign="center">
+            <Grid>
+              <Grid.Column>
                 <Field
                   component={CustomInput}
                   id="register-form-email"

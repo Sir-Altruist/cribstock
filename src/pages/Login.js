@@ -11,8 +11,8 @@ function Login() {
 
   const validate = (values) => {
     const errors = {};
-    if (!values.email) {
-      errors.username = "Email is required";
+    if (!values.username) {
+      errors.username = "Username is required";
     }
     if (!values.password) {
       errors.password = "Password is required";
@@ -36,8 +36,8 @@ function Login() {
             >
               Sign In
             </h2>
-            <Grid centered>
-              <Grid.Column textAlign="center">
+            <Grid>
+              <Grid.Column>
                 <Field
                   component={CustomInput}
                   id="register-form-username"
