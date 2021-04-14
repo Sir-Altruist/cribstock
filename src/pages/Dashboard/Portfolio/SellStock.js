@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Grid, Button, Form } from "semantic-ui-react";
-import { SellstockMobile } from "../../components/Mobile";
-import Sidebar from "../../components/Sidebar";
+import { SellstockMobile } from "../../../components/Mobile";
+import Sidebar from "../../../components/Sidebar";
 
 function SellStock() {
   const [activeItem, setActiveItem] = useState("portfolio");

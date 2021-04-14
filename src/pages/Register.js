@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 import { Form, Button, Grid } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { Form as F, Field } from "react-final-form";
 import { CustomInput } from "../components/Basic";
+import { signupUser } from "../actions";
 
-function Register() {
-  const onSubmit = (values) => {
-    console.log(values);
+function Register({ loggedIn, signupUser }) {
+  const history = useHistory();
+
+  useEffect(() => {
+    if (loggedIn) history.push("/dashboard/home");
+  }, [loggedIn, history]);
+
+  const onSubmit = async (values) => {
+    try {
+      await signupUser(values);
+      history.push("/login");
+    } catch (e) {
+      // show notification
+    }
   };
 
   const validate = (values) => {
@@ -99,4 +114,21 @@ function Register() {
   );
 }
 
-export default Register;
+Register.propTypes = {
+  loggedIn: PropTypes.bool.isRequired,
+  signupUser: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    loggedIn: state.user.loggedIn,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    signupUser: (data) => dispatch(signupUser(data)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Register);

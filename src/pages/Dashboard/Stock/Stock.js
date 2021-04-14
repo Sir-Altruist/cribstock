@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Container, Grid, Header, Segment, Image } from "semantic-ui-react";
-import Sidebar from "../../components/Sidebar";
+import Sidebar from "../../../components/Sidebar";
 import { Link } from "react-router-dom";
-import Explore from "../../assets/icons/explore.svg";
-import Cart from "../../assets/icons/cart.svg";
-import { StockdashboardMobile } from "../../components/Mobile";
+import Explore from "../../../assets/icons/explore.svg";
+import Cart from "../../../assets/icons/cart.svg";
+import { StockdashboardMobile } from "../../../components/Mobile";
 
 function StockDashboard() {
   const [activeItem, setActiveItem] = useState("stock");

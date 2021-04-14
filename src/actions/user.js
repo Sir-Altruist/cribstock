@@ -1,11 +1,33 @@
-import { LOGIN_USER, LOGOUT_USER, GET_USER, EDIT_USER } from "../constants";
+import {
+  LOGIN_USER,
+  LOGOUT_USER,
+  REGISTER_USER,
+  GET_USER,
+  EDIT_USER,
+} from "../constants";
 import { getApi, postApi, patchApi } from "../api";
 
-export const login = (data) => {
+export const signupUser = (data) => {
   return (dispatch) => {
     return new Promise(async (resolve, reject) => {
       try {
-        await postApi("login", data);
+        await postApi("user/signup", data);
+        dispatch({
+          type: REGISTER_USER,
+        });
+        resolve(true);
+      } catch (e) {
+        reject(false);
+      }
+    });
+  };
+};
+
+export const loginUser = (data) => {
+  return (dispatch) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        await postApi("user/login", data);
         dispatch({
           type: LOGIN_USER,
         });
@@ -17,7 +39,7 @@ export const login = (data) => {
   };
 };
 
-export const logout = () => {
+export const logoutUser = () => {
   return {
     type: LOGOUT_USER,
   };

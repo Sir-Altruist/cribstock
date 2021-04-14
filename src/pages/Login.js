@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 import { Form, Button, Checkbox, Grid } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { Form as F, Field } from "react-final-form";
 import { CustomInput } from "../components/Basic";
+import { loginUser } from "../actions";
 
-function Login() {
-  const onSubmit = (values) => {
-    console.log(values);
+function Login({ loggedIn, loginUser }) {
+  const history = useHistory();
+
+  useEffect(() => {
+    if (loggedIn) history.push("/dashboard/home");
+  }, [loggedIn, history]);
+
+  const onSubmit = async (values) => {
+    try {
+      await loginUser(values);
+    } catch (e) {
+      // show notification
+    }
   };
 
   const validate = (values) => {
@@ -81,4 +95,21 @@ function Login() {
   );
 }
 
-export default Login;
+Login.propTypes = {
+  loggedIn: PropTypes.bool.isRequired,
+  loginUser: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    loggedIn: state.user.loggedIn,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    loginUser: (data) => dispatch(loginUser(data)),
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

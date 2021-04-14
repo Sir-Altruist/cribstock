@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Grid, Segment, Button, Container } from "semantic-ui-react";
-import { Head2 } from "../../components/Stocks";
-import Sidebar from "../../components/Sidebar";
-import { StockModal } from "../../components/Modal";
-import { PortfolioMobile } from "../../components/Mobile";
+import { Head2 } from "../../../components/Stocks";
+import Sidebar from "../../../components/Sidebar";
+import { StockModal } from "../../../components/Modal";
+import { PortfolioMobile } from "../../../components/Mobile";
 
 function Portfolio() {
   const [activeItem, setActiveItem] = useState("portfolio");

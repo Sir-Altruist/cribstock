@@ -1,16 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { renderRoutes } from "react-router-config";
-import routes from "./routes";
 import { CustomHeader } from "./components/Basic";
 
-function App({ loggedIn, logout }) {
+function App({ route, loggedIn, logout }) {
   return (
     <div>
-      <Router>
-        <CustomHeader />
-        {renderRoutes(routes)}
-      </Router>
+      <CustomHeader />
+      {renderRoutes(route.routes)}
     </div>
   );
 }

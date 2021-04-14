@@ -1,18 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 import { Grid, Segment, Button, Container, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import Sidebar from "../../components/Sidebar";
 import Cart from "../../assets/icons/cart.svg";
 import { WelcomeMobile } from "../../components/Mobile";
 
-function Welcome() {
+function Dashboard({ loggedIn }) {
   const [activeItem, setActiveItem] = useState("dashboard");
   const handleClick = (e, { name }) => {
     setActiveItem(name);
   };
   const [visible, setVisible] = useState(false);
+  const history = useHistory();
+
   const visibilityToggle = () => setVisible(!visible);
   const cancelSidebar = () => setVisible(false);
+
+  useEffect(() => {
+    if (!loggedIn) history.push("/login");
+  }, [loggedIn, history]);
+
   return (
     <Grid>
       <Grid.Row only="computer">
@@ -158,4 +168,18 @@ function Welcome() {
   );
 }
 
-export default Welcome;
+Dashboard.propTypes = {
+  loggedIn: PropTypes.bool.isRequired,
+};
+
+const mapStateToProps = (state) => {
+  return {
+    loggedIn: state.user.loggedIn,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Dashboard);
