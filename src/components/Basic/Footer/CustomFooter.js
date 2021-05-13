@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Grid, Segment, Image } from "semantic-ui-react";
-import Logo from "../../../assets/images/logo.png";
 import Footer1 from "./Footer1";
 import Footer2 from "./Footer2";
 import Footer3 from "./Footer3";
 import Footer4 from "./Footer4";
+import Logo from "../../../assets/icons/logo1.svg";
 
 function CustomFooter() {
   return (
@@ -21,7 +21,7 @@ function CustomFooter() {
         <Container>
           <Grid>
             <Grid.Row only="computer">
-              <div className="brand-2">
+              {/* <div className="brand-2">
                 <Image
                   src={Logo}
                   alt="logo"
@@ -34,7 +34,8 @@ function CustomFooter() {
                   avatar
                 />
                 <span>Cribstock</span>
-              </div>
+              </div> */}
+              <Image src={Logo} style={{ width: "14rem" }} />
             </Grid.Row>
             <Grid.Row only="computer">
               <Grid.Column computer={3}>

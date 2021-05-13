@@ -167,6 +167,7 @@ function Dashboard({ loggedIn }) {
     </Grid>
   );
 }
+// export default Dashboard;
 
 Dashboard.propTypes = {
   loggedIn: PropTypes.bool.isRequired,
